@@ -26,34 +26,34 @@ export interface Stage {
   startsAt: Date,
   endsAt?: Date,
   skills: { [key: string]: Skill },
-};
+}
 
 export interface Job extends Stage {
   company: string,
   remote: boolean,
   position: string | string[],
-};
+}
 
 export interface Education extends Stage {
   university: string,
   graduiation: string,
-};
+}
 
 export interface ShowCase extends Stage {
   name: string,
   urls: string[],
   media: string[],
-};
+}
 
 export interface Skill {
   level: number,
   name: string,
-};
+}
 
 export interface SkillSet {
   title: string,
   data: SkillSet[] | { [key: string]: Skill },
-};
+}
 
 export class State {
   currentLanguage: Language;
@@ -81,7 +81,7 @@ export class State {
       case Language.javascript: { document.title = title + 'js'; break; }
     }
   }
-};
+}
 
 
 export class LanguageHelper {
@@ -107,4 +107,4 @@ export class LanguageHelper {
   get undefined() {
     return this.language === Language.ruby ? 'nil' : 'undefined';
   }
-};
+}

@@ -1,6 +1,6 @@
 export function formatCode(str: string) {
   return str.replace(/ /g, '<span class="white-space space"></span>');
-};
+}
 
 export function center(str: string, len: number) {
   if (str.length >= len) {
@@ -11,7 +11,7 @@ export function center(str: string, len: number) {
     const padEnd = Math.ceil(padTotal / 2) + 1;
     return new Array(padStart).join(' ') + str + new Array(padEnd).join(' ');
   }
-};
+}
 
 export function track(action: string, value: string){
   try {
@@ -28,7 +28,7 @@ export enum Easing {
   EaseIn,
   EaseOut,
   EaseInOut,
-};
+}
 
 const easings: {[key: number]: (factor: number) => number } = {
   [Easing.Linear]: (factor: number) => factor,
@@ -41,7 +41,7 @@ const easings: {[key: number]: (factor: number) => number } = {
       return easings[Easing.EaseOut](factor * 2 - 1) / 2 + 0.5;
     }
   },
-};
+}
 
 export interface AnimationOptions {
   target: { [key: string]: any },
@@ -49,7 +49,7 @@ export interface AnimationOptions {
   value: number,
   duration?: number,
   ease?: Easing,
-};
+}
 
 export function animate(options: AnimationOptions) {
   options.duration = options.duration || 500;
@@ -70,4 +70,4 @@ export function animate(options: AnimationOptions) {
     }
   }
   window.requestAnimationFrame(step);
-};
+}
