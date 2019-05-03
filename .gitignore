@@ -58,7 +58,7 @@ typings/
 .env
 
 # build directory
-dist
+#dist
 !dist/.keep
 
 # MacOS junk
