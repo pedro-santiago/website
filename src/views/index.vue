@@ -3,7 +3,7 @@
     <CookieInfo/>
     <CodeLine/>
     <Profile :data="data"/>
-    <Section :section="Section.Skills"></Section>
+    <Section :section="Section.Habilidades"></Section>
     <CodeLine/>
     <template v-for="skillset in data.skills">
       <SkillSet
@@ -13,39 +13,41 @@
       />
     </template>
     <CodeLine/>
-    <Section :section="Section.CurriculumVitae"></Section>
-    <CodeLine/>
-    <CurriculumVitae :data="data.curriculumVitae"/>
-    <CodeLine/>
-    <CodeLine/>
-    <ShowCaseSection
-      :section="Section.Experiments"
-      name="experiments"
-      :data="data.experiments"
-    />
-    <ShowCaseSection
-      :section="Section.Projects"
-      name="projects"
-      :data="data.projects"
-    />
-    <ShowCaseSection
-      :section="Section.Talks"
-      name="talks"
-      :data="data.talks"
-    />
-    <ShowCaseSection
-      :section="Section.Packages"
-      name="packages"
-      :data="data.packages"
-    />
-    <ShowCaseSection
-      :section="Section.Misc"
-      name="misc"
-      :data="data.misc"
-    />
+
+<!--    <Section :section="Section.CurriculumVitae"></Section>-->
+<!--    <CodeLine/>-->
+<!--    -->
+<!--    <CurriculumVitae :data="data.curriculumVitae"/>-->
+<!--    -->
+<!--    <CodeLine/>-->
+<!--    <CodeLine/>-->
+<!--    <ShowCaseSection-->
+<!--      :section="Section.Experiments"-->
+<!--      name="experimentos"-->
+<!--      :data="data.experiments"-->
+<!--    />-->
+<!--    <ShowCaseSection-->
+<!--      :section="Section.Projects"-->
+<!--      name="projetos"-->
+<!--      :data="data.projects"-->
+<!--    />-->
+<!--    <ShowCaseSection-->
+<!--      :section="Section.Talks"-->
+<!--      name="talks"-->
+<!--      :data="data.talks"-->
+<!--    />-->
+<!--    <ShowCaseSection-->
+<!--      :section="Section.Packages"-->
+<!--      name="packages"-->
+<!--      :data="data.packages"-->
+<!--    />-->
+<!--    <ShowCaseSection-->
+<!--      :section="Section.Misc"-->
+<!--      name="misc"-->
+<!--      :data="data.misc"-->
+<!--    />-->
     <Legal/>
     <CodeLine/>
-    <Privacy/>
   </div>
 </template>
 

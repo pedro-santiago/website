@@ -18,127 +18,79 @@ export const state = new State();
 * Header *
 *********/
 
-export const myName = 'Tamino Martinius';
-export const profession = 'I speak Code';
+export const myName = 'Pedro Santiago';
+export const profession = 'Desenvolvedor Freelancer';
 export const street = 'Lehdenstr. 21';
 export const postalCode = '06847';
-export const city = 'Dessau';
+export const city = 'Porto Alegre, RS';
 export const emails: string[] = [
-  'hi@zaku.eu',
-  'hello@zaku.eu',
-  'im-not-a-recruiter@zaku.eu',
+  'contato@pedrosantiago.com.br'
 ];
 export const socialNetworks: { [key: string]: string } = {
-  github: 'https://github.com/tamino-martinius',
-  codepen: 'https://codepen.io/Zaku/',
-  dribbble: 'https://dribbble.com/TaminoMartinius',
-  twitter: 'https://twitter.com/TaminoMartinius',
-  linkedin: 'https://www.linkedin.com/in/tamino-martinius',
+  github: 'https://github.com/pedro-santiago',
+  linkedin: 'https://www.linkedin.com/in/santiagopedro/',
 };
 
 
 /*********
-* Skills *
+* Habilidades *
 *********/
 
 // AWS
 // AWS / Compute
-export const beanstalk: Skill = { level: 0.9, name: 'Beanstalk' };
-export const ec2: Skill = { level: 0.9, name: 'EC2' };
-export const ecs: Skill = { level: 0.8, name: 'ECS' };
-export const lambda: Skill = { level: 1.0, name: 'Lambda' };
-
-// AWS / Data
-export const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
-export const dynamodb: Skill = { level: 0.8, name: 'DynamoDB' };
-export const rds: Skill = { level: 1.0, name: 'DB Service' };
-export const s3: Skill = { level: 1.0, name: 'S3' };
-
-// AWS / Flow
-export const apigateway: Skill = { level: 0.9, name: 'API Gateway' };
-export const cloudfront: Skill = { level: 1.0, name: 'CloudFront' };
+export const ec2: Skill = { level: 1.0, name: 'Elastic Compute Cloud (EC2)' };
+export const cloudformation: Skill = { level: 0.7, name: 'CloudFormation' };
+export const elb: Skill = { level: 0.7, name: 'Simple Queue Service (SQS)' };
+export const rds: Skill = { level: 0.5, name: 'RDS' };
+export const s3: Skill = { level: 0.9, name: 'S3' };
 export const r53: Skill = { level: 1.0, name: 'Route 53' };
-export const sns: Skill = { level: 0.9, name: 'SNS' };
 
-// AWS / Management
-export const cloudformation: Skill = { level: 0.9, name: 'CloudFormation' };
-export const cloudtrail: Skill = { level: 0.8, name: 'CloudTrail' };
-export const cloudwatch: Skill = { level: 1.0, name: 'CloudWatch' };
-export const iam: Skill = { level: 0.9, name: 'IAM' };
 
-// Backend
-// Backend / CI
-export const circleCI: Skill = { level: 0.8, name: 'CircleCI' };
-export const jasmine: Skill = { level: 0.9, name: 'Jasmine' };
-export const jenkins: Skill = { level: 0.9, name: 'Jenkins' };
-export const jest: Skill = { level: 1.0, name: 'Jest' };
-export const mocha: Skill = { level: 1.0, name: 'Mocha' };
-export const rspec: Skill = { level: 1.0, name: 'RSpec' };
-export const travis: Skill = { level: 0.9, name: 'Travis CI' };
+// Backend / Frameworks
+export const laravel: Skill = { level: 0.9, name: 'PHP/Laravel' };
+export const codeigniter: Skill = { level: 0.5, name: 'PHP/CodeIgniter' };
+export const slim: Skill = { level: 0.7, name: 'PHP/Slim' };
+export const phalcon: Skill = { level: 0.3, name: 'Phalcon' };
+export const symfony: Skill = { level: 0.6, name: 'PHP/Symfony' };
+export const express: Skill = { level: 0.5, name: 'NodeJS/Express' };
+export const adonis: Skill = { level: 0.8, name: 'NodeJS/AdonisJS' };
+export const antd: Skill = { level: 0.7, name: 'React/Ant.Design' };
+export const umijs: Skill = { level: 0.6, name: 'React/UMIJS' };
 
 // Backend / Code
-export const asp: Skill = { level: 0.8, name: 'ASP.net' };
-export const coffeescript: Skill = { level: 0.9, name: 'CoffeeScript' };
-export const meteor: Skill = { level: 1.0, name: 'Meteor' };
-export const nodejs: Skill = { level: 1.0, name: 'Node.js' };
-export const rails: Skill = { level: 1.0, name: 'Ruby on Rails' };
-export const ruby: Skill = { level: 1.0, name: 'Ruby' };
-export const typescript: Skill = { level: 1.0, name: 'TypeScript' };
+export const nodejs: Skill = { level: 0.9, name: 'Node.js' };
+export const typescript: Skill = { level: 0.8, name: 'TypeScript' };
+export const php: Skill = { level: 1.0, name: 'PHP' };
+export const python: Skill = { level: 0.5, name: 'Python' };
 
 // Backend / Data
 export const api: Skill = { level: 1.0, name: 'API' };
-export const apollo: Skill = { level: 1.0, name: 'Apollo GraphQL' };
-export const elasticsearch: Skill = { level: 0.7, name: 'elasticsearch' };
-export const gql: Skill = { level: 1.0, name: 'GraphQL' };
-export const mariadb: Skill = { level: 0.8, name: 'MariaDB' };
 export const mysql: Skill = { level: 0.8, name: 'MySQL' };
-export const mongodb: Skill = { level: 0.9, name: 'MongoDB' };
-export const mssql: Skill = { level: 0.9, name: 'Microsoft SQL' };
+export const mongodb: Skill = { level: 0.5, name: 'MongoDB' };
 export const psql: Skill = { level: 1.0, name: 'PostgreSQL' };
-export const redis: Skill = { level: 0.8, name: 'Redis' };
-
-// Backend / Deploy
-export const android: Skill = { level: 0.8, name: 'Android' };
-export const cordova: Skill = { level: 0.9, name: 'Apache Cordova' };
-export const docker: Skill = { level: 0.9, name: 'Docker' };
-export const git: Skill = { level: 1.0, name: 'Git' };
-export const heroku: Skill = { level: 0.9, name: 'Heroku' };
-export const ios: Skill = { level: 0.9, name: 'iOS' };
+export const redis: Skill = { level: 0.7, name: 'Redis' };
+export const couchdb: Skill = { level: 0.4, name: 'CouchDB' };
 
 // Frontend
-// Frontend / Logic
-export const backbone: Skill = { level: 0.7, name: 'Backbone.js' };
-export const browserify: Skill = { level: 0.8, name: 'Browserify' };
-export const jquery: Skill = { level: 1.0, name: 'jQuery' };
-export const js: Skill = { level: 1.0, name: 'JavaScript' };
-export const websockets: Skill = { level: 0.8, name: 'WebSockets' };
-
 // Frontend / Markup
-export const haml: Skill = { level: 0.9, name: 'Haml' };
-export const handlebars: Skill = { level: 1.0, name: 'Handlebars' };
+export const handlebars: Skill = { level: 0.4, name: 'Handlebars' };
 export const html: Skill = { level: 1.0, name: 'HTML' };
-export const php: Skill = { level: 0.7, name: 'PHP' };
 export const markdown: Skill = { level: 0.9, name: 'Markdown' };
 export const react: Skill = { level: 0.8, name: 'React' };
-export const vuejs: Skill = { level: 1.0, name: 'Vue.js' };
+export const vuejs: Skill = { level: 0.2, name: 'Vue.js' };
 
 // Frontend / Style
 export const css: Skill = { level: 1.0, name: 'CSS' };
 export const less: Skill = { level: 0.9, name: 'less' };
 export const sass: Skill = { level: 0.9, name: 'Sass' };
-export const stylus: Skill = { level: 1.0, name: 'Stylus' };
-export const svg: Skill = { level: 1.0, name: 'SVG (Animations)' };
 
 // Frontend / Design
-export const afterEffects: Skill = { level: 0.3, name: 'After Effects' };
-export const blender: Skill = { level: 0.5, name: 'Blender' };
-export const sketch: Skill = { level: 0.8, name: 'Sketch' };
-export const ui: Skill = { level: 0.7, name: 'User Interface' };
+export const photoshop: Skill = { level: 0.4, name: 'Photoshop' };
+export const ui: Skill = { level: 0.5, name: 'User Interface' };
 export const ux: Skill = { level: 0.6, name: 'User Experience' };
 
 // Misc
-export const teamlead: Skill = { level: 0.9, name: 'Team Lead' };
-export const security: Skill = { level: 0.9, name: 'Security' };
+
 
 // Study
 export const logic: Skill = { level: 0.9, name: 'Logic' };
@@ -151,44 +103,19 @@ export const parallelExec: Skill = { level: 0.7, name: 'Parallel Exec.' };
 
 export const skills: SkillSet[] = [
   {
-    title: 'AWS',
-    data: [
-      {
-        title: 'Compute',
-        data: { beanstalk, ec2, ecs, lambda },
-      },
-      {
-        title: 'Data',
-        data: { aurora, dynamodb, rds, s3 },
-      },
-      {
-        title: 'Flow',
-        data: { apigateway, cloudfront, r53, sns },
-      },
-      {
-        title: 'Management',
-        data: { cloudformation, cloudtrail, cloudwatch, iam },
-      },
-    ],
-  },
-  {
     title: 'Backend',
     data: [
       {
-        title: 'CI',
-        data: { circleCI, jasmine, jenkins, jest, mocha, rspec, travis },
+        title: 'Programação',
+        data: { nodejs, typescript, python, php },
       },
       {
-        title: 'Code',
-        data: { asp, meteor, nodejs, rails, ruby, typescript },
+        title: 'Banco de Dados',
+        data: { api, mysql, mongodb, psql, redis, couchdb },
       },
       {
-        title: 'Data',
-        data: { api, apollo, elasticsearch, gql, mariadb, mysql, mongodb, mssql, psql, redis },
-      },
-      {
-        title: 'Deploy',
-        data: { android, cordova, docker, git, heroku, ios },
+        title: 'Frameworks',
+        data: { laravel, symfony },
       },
     ],
   },
@@ -196,29 +123,21 @@ export const skills: SkillSet[] = [
     title: 'Frontend',
     data: [
       {
-        title: 'Logic',
-        data: { backbone, browserify, jquery, js, websockets },
-      },
-      {
         title: 'Markup',
-        data: { haml, handlebars, html, php, markdown, react, vuejs },
+        data: { handlebars, html, markdown, react, vuejs },
       },
       {
-        title: 'Style',
-        data: { css, less, sass, stylus, svg },
+        title: 'Estilo',
+        data: { css, less, sass },
       },
       {
         title: 'Design',
-        data: { afterEffects, blender, sketch, ui, ux },
+        data: { photoshop, ui, ux },
       },
     ],
   },
   {
-    title: 'Misc',
-    data: { teamlead, security },
-  },
-  {
-    title: 'Study',
+    title: 'Hobby',
     data: { logic, distributedSys, imageProcessing, math, neuronalNetwork, numeric, parallelExec },
   },
 ];
@@ -244,16 +163,10 @@ export const curriculumVitae: (Job | Education)[] = [
       'Lead Engineering',
     ],
     skills: {
-      lambda,
-      beanstalk,
       rds,
-      aurora,
       nodejs,
       mongodb,
-      android,
-      ios,
       api,
-      rails,
       psql,
       redis,
     },
@@ -274,15 +187,10 @@ export const curriculumVitae: (Job | Education)[] = [
       'Head of Mobile',
     ],
     skills: {
-      lambda,
-      beanstalk,
       rds,
       nodejs,
       mongodb,
-      android,
-      ios,
       api,
-      rails,
       psql,
       redis,
     },
@@ -304,10 +212,7 @@ export const curriculumVitae: (Job | Education)[] = [
     skills: {
       nodejs,
       mongodb,
-      android,
-      ios,
       api,
-      rails,
       psql,
       redis,
     },
@@ -324,10 +229,8 @@ export const curriculumVitae: (Job | Education)[] = [
     remote: false,
     position: 'Backend Developer',
     skills: {
-      rails,
       psql,
       redis,
-      elasticsearch,
     },
   },
 
@@ -342,10 +245,8 @@ export const curriculumVitae: (Job | Education)[] = [
     remote: true,
     position: 'Backend Developer',
     skills: {
-      rails,
       psql,
       redis,
-      elasticsearch,
     },
   },
 
@@ -362,7 +263,6 @@ export const curriculumVitae: (Job | Education)[] = [
     skills: {
       nodejs,
       less,
-      backbone,
     },
   },
 
@@ -378,9 +278,7 @@ export const curriculumVitae: (Job | Education)[] = [
     position: 'Frontend Developer',
     skills: {
       php,
-      js,
       less,
-      svg,
     },
   },
 
@@ -413,9 +311,7 @@ export const curriculumVitae: (Job | Education)[] = [
     remote: false,
     position: 'Head of Code',
     skills: {
-      asp,
       nodejs,
-      mssql,
     },
   },
 
@@ -450,16 +346,12 @@ export const curriculumVitae: (Job | Education)[] = [
     position: 'Full Stack Developer',
     skills: {
       nodejs,
-      rails,
       react,
       php,
       mongodb,
       psql,
-      mariadb,
-      stylus,
       less,
       sass,
-      svg,
     },
   },
 ];
@@ -486,14 +378,10 @@ export const experiments: ShowCase[] = [
     ],
     media: [],
     skills: {
-      svg,
       ui,
       ux,
       css,
-      stylus,
       html,
-      js,
-      sketch,
     },
   },
 
@@ -512,7 +400,6 @@ export const experiments: ShowCase[] = [
     media: [],
     skills: {
       html,
-      js,
     },
   },
 
@@ -534,14 +421,10 @@ export const experiments: ShowCase[] = [
     ],
     media: [],
     skills: {
-      svg,
       ui,
       ux,
       css,
-      stylus,
       html,
-      js,
-      sketch,
     },
   },
 
@@ -563,14 +446,10 @@ export const experiments: ShowCase[] = [
     ],
     media: [],
     skills: {
-      svg,
       ui,
       ux,
       css,
-      stylus,
       html,
-      js,
-      sketch,
     },
   },
 
@@ -591,8 +470,6 @@ export const experiments: ShowCase[] = [
     ],
     media: [],
     skills: {
-      afterEffects,
-      blender,
     },
   },
 ];
@@ -615,12 +492,9 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       s3,
-      cloudfront,
       nodejs,
       ec2,
-      lambda,
       typescript,
-      stylus,
       html,
       vuejs,
     },
@@ -642,11 +516,8 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       s3,
-      cloudfront,
       typescript,
-      coffeescript,
       nodejs,
-      stylus,
       html,
       handlebars,
       vuejs,
@@ -669,13 +540,10 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       s3,
-      cloudfront,
-      lambda,
       nodejs,
       psql,
       typescript,
       html,
-      stylus,
       vuejs,
     },
   },
@@ -697,11 +565,8 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       s3,
-      cloudfront,
       nodejs,
-      js,
       html,
-      stylus,
       handlebars,
     },
   },
@@ -723,8 +588,6 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       ec2,
-      coffeescript,
-      js,
       html,
       css,
     },
@@ -746,14 +609,9 @@ export const projects: ShowCase[] = [
     skills: {
       ec2,
       s3,
-      cloudfront,
-      js,
       html,
       nodejs,
       handlebars,
-      meteor,
-      stylus,
-      websockets,
     },
   },
 
@@ -772,11 +630,8 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       s3,
-      cloudfront,
       nodejs,
-      js,
       html,
-      stylus,
       psql,
       api,
     },
@@ -798,9 +653,7 @@ export const projects: ShowCase[] = [
     media: [],
     skills: {
       nodejs,
-      js,
       html,
-      stylus,
       psql,
       api,
     },
@@ -830,7 +683,6 @@ export const talks: ShowCase[] = [
       api,
       nodejs,
       html,
-      stylus,
     },
   },
 
@@ -853,7 +705,6 @@ export const talks: ShowCase[] = [
       psql,
       nodejs,
       html,
-      stylus,
     },
   },
 
@@ -872,10 +723,8 @@ export const talks: ShowCase[] = [
     ],
     media: [],
     skills: {
-      gql,
       nodejs,
       html,
-      stylus,
     },
   },
 
@@ -896,7 +745,6 @@ export const talks: ShowCase[] = [
       typescript,
       nodejs,
       html,
-      stylus,
     },
   },
 
@@ -917,7 +765,6 @@ export const talks: ShowCase[] = [
       api,
       nodejs,
       html,
-      stylus,
     },
   },
 ];
@@ -945,7 +792,6 @@ export const packages: ShowCase[] = [
       api,
       nodejs,
       html,
-      stylus,
     },
   },
 
@@ -970,9 +816,7 @@ export const packages: ShowCase[] = [
     skills: {
       nodejs,
       typescript,
-      js,
       psql,
-      gql,
       api,
     },
   },
@@ -995,9 +839,6 @@ export const packages: ShowCase[] = [
     ],
     media: [],
     skills: {
-      meteor,
-      js,
-      coffeescript,
       mongodb,
     },
   },
@@ -1014,8 +855,6 @@ export const packages: ShowCase[] = [
     ],
     media: [],
     skills: {
-      meteor,
-      js,
     },
   },
 
@@ -1032,8 +871,6 @@ export const packages: ShowCase[] = [
     ],
     media: [],
     skills: {
-      meteor,
-      js,
     },
   },
 
@@ -1050,9 +887,6 @@ export const packages: ShowCase[] = [
     ],
     media: [],
     skills: {
-      meteor,
-      js,
-      coffeescript,
     },
   },
 ];
@@ -1078,7 +912,6 @@ export const misc: ShowCase[] = [
     ],
     media: [],
     skills: {
-      docker,
     },
   },
 

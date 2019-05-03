@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <Section :section="Section.Profile"></Section>
+    <Section :section="Section.Perfil"></Section>
     <CodeLine/>
     <Variable name="myName">
       <String :value="data.myName"></String>

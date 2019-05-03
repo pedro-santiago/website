@@ -1,7 +1,7 @@
 <template>
   <div class="cookie-info" @click.stop="hide" :class="{ hidden: hidden }">
     <CommentBlock
-      comment="Please Note: This page uses cookies to count visitors"
+      comment="Obs: Esta página utiliza cookies para contabilizar estatísticas."
     />
   </div>
 </template>

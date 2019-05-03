@@ -1,12 +1,12 @@
 export enum Section {
-  Profile,
-  Skills,
-  CurriculumVitae,
-  Experiments,
-  Projects,
-  Talks,
-  Packages,
-  Misc,
+  Perfil,
+  Habilidades,
+  // CurriculumVitae,
+  // Experiments,
+  // Projects,
+  // Talks,
+  // Packages,
+  // Misc,
 };
 
 export enum Language {
@@ -16,9 +16,7 @@ export enum Language {
 };
 
 export const languages: Language[] = [
-  Language.ruby,
   Language.typescript,
-  Language.javascript,
 ];
 
 export interface Stage {
