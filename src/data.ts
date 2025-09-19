@@ -10,18 +10,15 @@ export const state = new State();
  * Header *
  *********/
 
-export const myName = 'Tamino Martinius';
-export const profession = 'I speak Code';
-export const street = 'Lehdenstr. 21';
-export const postalCode = '06847';
-export const city = 'Dessau';
-export const emails: string[] = ['io@tamino.dev', 'dev@tamino.io', 'im-not-a-recruiter@tamino.dev'];
+export const myName = 'Pedro Oliveira';
+export const profession = 'CTO as a Service & PHP Specialist';
+export const street = 'Brazil';
+export const postalCode = '';
+export const city = 'Remote';
+export const emails: string[] = ['pedro@pedrosantiago.com.br'];
 export const socialNetworks: { [key: string]: string } = {
-  github: 'https://github.com/tamino-martinius',
-  codepen: 'https://codepen.io/Zaku/',
-  dribbble: 'https://dribbble.com/TaminoMartinius',
-  twitter: 'https://twitter.com/TaminoMartinius',
-  linkedin: 'https://www.linkedin.com/in/tamino-martinius',
+  github: 'https://github.com/pedro-santiago',
+  linkedin: 'https://www.linkedin.com/in/pedro-oliveira-santiago',
 };
 
 /*********
@@ -101,14 +98,21 @@ export const jquery: Skill = { level: 1.0, name: 'jQuery' };
 export const js: Skill = { level: 1.0, name: 'JavaScript' };
 export const websockets: Skill = { level: 0.8, name: 'WebSockets' };
 
+// PHP Frameworks
+export const laravel: Skill = { level: 1.0, name: 'Laravel' };
+export const phalcon: Skill = { level: 0.9, name: 'Phalcon' };
+export const codeigniter: Skill = { level: 0.9, name: 'CodeIgniter' };
+export const zendframework: Skill = { level: 0.8, name: 'ZendFramework' };
+export const slim: Skill = { level: 0.9, name: 'Slim' };
+
 // Frontend / Markup
 export const haml: Skill = { level: 0.9, name: 'Haml' };
 export const handlebars: Skill = { level: 1.0, name: 'Handlebars' };
 export const html: Skill = { level: 1.0, name: 'HTML' };
-export const php: Skill = { level: 0.7, name: 'PHP' };
+export const php: Skill = { level: 1.0, name: 'PHP' };
 export const markdown: Skill = { level: 0.9, name: 'Markdown' };
 export const react: Skill = { level: 1.0, name: 'React' };
-export const vuejs: Skill = { level: 0.9, name: 'Vue.js' };
+export const vuejs: Skill = { level: 1.0, name: 'Vue.js' };
 
 // Frontend / Style
 export const css: Skill = { level: 1.0, name: 'CSS' };
@@ -124,8 +128,23 @@ export const sketch: Skill = { level: 0.8, name: 'Sketch' };
 export const ui: Skill = { level: 0.7, name: 'User Interface' };
 export const ux: Skill = { level: 0.6, name: 'User Experience' };
 
+// SaaS & Architecture
+export const saasDesign: Skill = { level: 1.0, name: 'SaaS Design' };
+export const etl: Skill = { level: 0.9, name: 'ETL (Pentaho)' };
+export const pentaho: Skill = { level: 0.9, name: 'Pentaho' };
+export const systemsArchitecture: Skill = { level: 1.0, name: 'Systems Architecture' };
+export const platformEngineering: Skill = { level: 1.0, name: 'Platform Engineering' };
+
+// Frontend Tools
+export const inertiajs: Skill = { level: 1.0, name: 'Inertia.js' };
+export const compositionApi: Skill = { level: 1.0, name: 'Vue Composition API' };
+export const jquery: Skill = { level: 1.0, name: 'jQuery' };
+export const angularjs: Skill = { level: 0.8, name: 'AngularJS (v1)' };
+
 // Misc
-export const teamlead: Skill = { level: 0.9, name: 'Team Lead' };
+export const teamlead: Skill = { level: 1.0, name: 'Team Lead' };
+export const ctoService: Skill = { level: 1.0, name: 'CTO as a Service' };
+export const consulting: Skill = { level: 1.0, name: 'Technical Consulting' };
 export const security: Skill = { level: 0.9, name: 'Security' };
 
 // Study
@@ -139,44 +158,19 @@ export const parallelExec: Skill = { level: 0.7, name: 'Parallel Exec.' };
 
 export const skills: SkillSet[] = [
   {
-    title: 'AWS',
+    title: 'Backend & PHP',
     data: [
       {
-        title: 'Compute',
-        data: { beanstalk, ec2, ecs, fargate, lambda },
+        title: 'PHP Frameworks',
+        data: { php, laravel, phalcon, slim, codeigniter, zendframework },
       },
       {
-        title: 'Data',
-        data: { aurora, dynamodb, rds, s3 },
+        title: 'Backend Languages',
+        data: { nodejs, typescript, ruby },
       },
       {
-        title: 'Flow',
-        data: { apigateway, cloudfront, r53, sns },
-      },
-      {
-        title: 'Management',
-        data: { cloudformation, cloudtrail, cloudwatch, iam },
-      },
-    ],
-  },
-  {
-    title: 'Backend',
-    data: [
-      {
-        title: 'CI',
-        data: { circleCI, jasmine, jenkins, jest, mocha, rspec, travis },
-      },
-      {
-        title: 'Code',
-        data: { asp, meteor, nodejs, rails, ruby, typescript },
-      },
-      {
-        title: 'Data',
-        data: { api, apollo, elasticsearch, gql, mariadb, mysql, mongodb, mssql, psql, redis },
-      },
-      {
-        title: 'Deploy',
-        data: { android, cordova, docker, git, heroku, ios },
+        title: 'Data & Storage',
+        data: { mysql, mongodb, redis, psql, elasticsearch },
       },
     ],
   },
@@ -184,30 +178,61 @@ export const skills: SkillSet[] = [
     title: 'Frontend',
     data: [
       {
-        title: 'Logic',
-        data: { backbone, browserify, jquery, js, websockets },
+        title: 'Modern Frameworks',
+        data: { vuejs, react, compositionApi, inertiajs },
       },
       {
-        title: 'Markup',
-        data: { haml, handlebars, html, php, markdown, react, vuejs },
+        title: 'Classic & Markup',
+        data: { jquery, angularjs, html, css, js },
       },
       {
-        title: 'Style',
-        data: { css, less, scss, stylus, svg },
-      },
-      {
-        title: 'Design',
-        data: { afterEffects, blender, sketch, ui, ux },
+        title: 'Style & Design',
+        data: { scss, less, stylus, svg },
       },
     ],
   },
   {
-    title: 'Misc',
-    data: { teamlead, security },
+    title: 'AWS & Infrastructure',
+    data: [
+      {
+        title: 'Compute',
+        data: { ec2, lambda, beanstalk },
+      },
+      {
+        title: 'Storage & Data',
+        data: { s3, rds, dynamodb },
+      },
+      {
+        title: 'Network & Services',
+        data: { r53, cloudfront, sns, apigateway },
+      },
+    ],
   },
   {
-    title: 'Study',
-    data: { logic, distributedSys, imageProcessing, math, neuronalNetwork, numeric, parallelExec },
+    title: 'SaaS & Architecture',
+    data: [
+      {
+        title: 'Platform Design',
+        data: { saasDesign, systemsArchitecture, platformEngineering },
+      },
+      {
+        title: 'Data Engineering',
+        data: { etl, pentaho, api },
+      },
+      {
+        title: 'DevOps & Tools',
+        data: { docker, git, jenkins, travis },
+      },
+    ],
+  },
+  {
+    title: 'Leadership & Consulting',
+    data: {
+      teamlead,
+      ctoService,
+      consulting,
+      security,
+    },
   },
 ];
 
@@ -217,236 +242,262 @@ export const skills: SkillSet[] = [
 
 export const curriculumVitae: (Job | Education)[] = [
   {
-    company: 'shyftplan GmbH',
+    company: 'CTO as a Service',
     description: `
-      I lead shyftplans Development, Tech and Automation. I'm responsible to
-      design, manage and build the Infrastructure for thousands of concurrent
-      Users at Germanys best shift planning and accounting Web Application.
+      I advise non-tech companies on SaaS strategy, product architecture, and scaling operations.
+      Built investment fund platform for receivables, managed ETL migration from Pentaho to AWS,
+      and integrated with Stark Bank for wallet, tokenization, and digital cards. Created SaaS tiers
+      with bundled licenses and embedded work hours.
     `,
-    startsAt: new Date('2020-03-01'),
+    startsAt: new Date('2024-06-01'),
     endsAt: undefined,
-    remote: false,
-    position: ['Chief Technology Officer', 'Co-Founder'],
-    skills: {
-      lambda,
-      beanstalk,
-      rds,
-      aurora,
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I lead shyftplans Front- and Backend Developers. I'm responsible to
-      design, manage and build the Infrastructure for thousands of concurrent
-      Users at Germanys best shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2017-07-01'),
-    endsAt: new Date('2020-02-28'),
-    remote: false,
-    position: ['Head of Development', 'Lead Engineering', 'Co-Founder'],
-    skills: {
-      lambda,
-      beanstalk,
-      rds,
-      aurora,
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I lead shyftplans Front- and Backend Developers. I'm responsible for
-      the Web and Mobile Infrastructure for Germanys best shift planning and
-      accounting Web Application.
-    `,
-    startsAt: new Date('2016-12-01'),
-    endsAt: new Date('2017-06-30'),
-    remote: false,
-    position: ['Head of Code', 'Head of Mobile', 'Co-Founder'],
-    skills: {
-      lambda,
-      beanstalk,
-      rds,
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I plan and build the Mobile App and Infrastructure for Germanys best
-      shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2014-12-01'),
-    endsAt: new Date('2016-11-30'),
-    remote: false,
-    position: ['Head of Mobile', 'Backend Developer', 'Co-Founder'],
-    skills: {
-      nodejs,
-      mongodb,
-      android,
-      ios,
-      api,
-      rails,
-      psql,
-      redis,
-    },
-  },
-
-  {
-    company: 'pijajo UG (shyftplan GmbH)',
-    description: `
-      I remotely plan and build the Infrastructure pre and post launch for
-      Germanys best shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2014-12-01'),
-    endsAt: new Date('2015-01-31'),
     remote: true,
-    position: 'Backend Developer',
+    position: 'CTO as a Service & Consultant',
     skills: {
-      rails,
-      psql,
-      redis,
-      elasticsearch,
-    },
-  },
-
-  {
-    company: 'Nutanix',
-    description: `
-      I remotely worked as Frontend Developer on the Server Admin Interface of
-      Nutanix Cloud Infrastructure.
-    `,
-    startsAt: new Date('2014-11-01'),
-    endsAt: new Date('2015-01-31'),
-    remote: true,
-    position: 'Frontend Developer',
-    skills: {
+      saasDesign,
+      systemsArchitecture,
+      laravel,
+      php,
       nodejs,
-      less,
-      backbone,
+      pentaho,
+      etl,
+      s3,
+      ec2,
+      mysql,
+      redis,
+      consulting,
     },
   },
 
   {
-    company: 'Nutanix',
+    company: 'idez Digital',
     description: `
-      I remotely implemented a complete redesign of Nutanix website with
-      PHP and less.
+      Founded and scaled a digital solutions company, leading technology strategy and execution.
+      Directed systems architecture, platform engineering, and team growth. Oversaw delivery of
+      large-scale financial and digital products. Supported product strategy, partnerships, and
+      client acquisition. Successfully sold the company in June 2024.
     `,
-    startsAt: new Date('2014-08-01'),
-    endsAt: new Date('2014-10-31'),
-    remote: true,
-    position: 'Frontend Developer',
+    startsAt: new Date('2018-01-01'),
+    endsAt: new Date('2024-06-01'),
+    remote: false,
+    position: ['Founder', 'CTO'],
+    skills: {
+      teamlead,
+      systemsArchitecture,
+      platformEngineering,
+      laravel,
+      php,
+      vuejs,
+      mysql,
+      redis,
+      s3,
+      ec2,
+      api,
+      saasDesign,
+    },
+  },
+
+  {
+    company: 'madewithlove BvBA',
+    description: `
+      Delivered high-quality full stack solutions for international clients.
+      Main tech stack included Laravel, React, Slim, and framework-agnostic applications.
+      Worked with a diverse range of European clients building scalable web applications.
+    `,
+    startsAt: new Date('2017-01-01'),
+    endsAt: new Date('2018-01-01'),
+    remote: false,
+    position: 'Software Engineer',
+    skills: {
+      laravel,
+      php,
+      react,
+      slim,
+      mysql,
+      api,
+      js,
+    },
+  },
+
+  {
+    company: 'Plista GmbH',
+    description: `
+      Improved large-scale programmatic advertising platform serving millions of requests.
+      Tech stack included REST APIs, Docker, Mesos, MySQL, MongoDB, Redis, and Phalcon.
+      Focused on performance optimization and system scalability.
+    `,
+    startsAt: new Date('2016-01-01'),
+    endsAt: new Date('2017-01-01'),
+    remote: false,
+    position: 'Senior PHP Developer',
     skills: {
       php,
-      js,
-      less,
-      svg,
-    },
-  },
-
-  {
-    company: 'Volkswagen AG',
-    description: `
-      I researched a live video processing solution at Volkswagens destruction
-      free analysis Team.
-    `,
-    startsAt: new Date('2014-02-01'),
-    endsAt: new Date('2015-01-31'),
-    remote: false,
-    position: 'Developer (Research - NDA)',
-    skills: {
-      nodejs,
+      phalcon,
+      mysql,
       mongodb,
-      imageProcessing,
+      redis,
+      docker,
+      api,
     },
   },
 
   {
-    company: 'Novotrend GmbH',
+    company: 'Learncafe',
     description: `
-      I designed and planned build the Infrastructure of the most common Web
-      Application to manage the process for pivate job adviser. I was also
-      involved in creating a CRM for customer Websites.
+      Platform optimization and automation for e-learning platform.
+      Tech stack included ZendFramework, MySQL, and jQuery.
+      Focused on improving platform performance and user experience.
     `,
-    startsAt: new Date('2010-04-01'),
+    startsAt: new Date('2015-01-01'),
+    endsAt: new Date('2015-12-31'),
+    remote: false,
+    position: 'Senior PHP Developer',
+    skills: {
+      php,
+      zendframework,
+      mysql,
+      jquery,
+    },
+  },
+
+  {
+    company: 'Yoozon',
+    description: `
+      Co-founded startup operating across multiple markets (Brazil, São Paulo, Santiago, Wisconsin).
+      Tech stack included Laravel, Node.js, Redis, MySQL, BeanstalkD, AWS, jQuery, and socket.io.
+      Led technical development and international expansion efforts.
+    `,
+    startsAt: new Date('2014-01-01'),
+    endsAt: new Date('2015-01-01'),
+    remote: false,
+    position: ['CTO', 'Co-Founder'],
+    skills: {
+      laravel,
+      php,
+      nodejs,
+      mysql,
+      redis,
+      s3,
+      jquery,
+      teamlead,
+    },
+  },
+
+  {
+    company: 'CDZ Tecnologia',
+    description: `
+      Lead platform developer responsible for core system development.
+      Tech stack included CodeIgniter framework for building scalable web applications.
+    `,
+    startsAt: new Date('2014-01-01'),
+    endsAt: new Date('2014-12-31'),
+    remote: false,
+    position: 'Senior PHP Developer',
+    skills: {
+      php,
+      codeigniter,
+      mysql,
+    },
+  },
+
+  {
+    company: 'Lab28 Software',
+    description: `
+      Founded and led software studio building custom solutions for clients.
+      Tech stack included PHP, MySQL, JavaScript, and AWS.
+      Managed client relationships and technical delivery.
+    `,
+    startsAt: new Date('2012-01-01'),
     endsAt: new Date('2013-12-31'),
     remote: false,
-    position: 'Head of Code',
+    position: 'Founder',
     skills: {
-      asp,
-      nodejs,
-      mssql,
+      php,
+      mysql,
+      js,
+      s3,
+      teamlead,
     },
   },
 
   {
-    university: 'Philipps-Universität Marburg',
+    company: 'Lallum Comunicação',
     description: `
-      I studied IT with secondary subject Math. My focus was on Numeric,
-      Parralel Execution, Neural Networks and functional programming languages.
+      Managed workforce and digital campaigns. Website development with HTML and PHP.
+      Responsible for digital marketing strategy and web development projects.
     `,
-    startsAt: new Date('2004'),
-    endsAt: new Date('2015'),
-    graduiation: 'Intermediate diploma',
+    startsAt: new Date('2011-01-01'),
+    endsAt: new Date('2011-12-31'),
+    remote: false,
+    position: 'Digital Marketing Manager',
     skills: {
-      numeric,
+      php,
+      html,
+      mysql,
+    },
+  },
+
+  {
+    company: 'Next Interactive Marketing',
+    description: `
+      Built interactive applications and totem management tools for marketing campaigns.
+      Tech stack included PHP, MySQL, and ActionScript (Flash) for rich interactive experiences.
+    `,
+    startsAt: new Date('2010-01-01'),
+    endsAt: new Date('2011-01-01'),
+    remote: false,
+    position: 'PHP Developer',
+    skills: {
+      php,
+      mysql,
+      js,
+    },
+  },
+
+  {
+    company: 'MIND Digital Marketing',
+    description: `
+      Developed websites, SEO strategies, and CRM tools for digital marketing clients.
+      Tech stack included PHP, HTML, and SEO optimization techniques.
+    `,
+    startsAt: new Date('2010-01-01'),
+    endsAt: new Date('2010-12-31'),
+    remote: false,
+    position: 'PHP Developer',
+    skills: {
+      php,
+      html,
+      mysql,
+    },
+  },
+
+  {
+    university: 'PUC Minas',
+    description: `
+      Bachelor in Computer Science focusing on software engineering, algorithms, and system design.
+      Built strong foundation in programming, data structures, and software architecture.
+    `,
+    startsAt: new Date('2011'),
+    endsAt: new Date('2014'),
+    graduiation: 'Bachelor in Computer Science',
+    skills: {
       logic,
       math,
-      parallelExec,
-      neuronalNetwork,
-      distributedSys,
+      systemsArchitecture,
     },
   },
 
   {
-    company: 'Freelancer',
+    university: 'Ibmec',
     description: `
-      I created Websites for small and medium sized companies and worked
-      remotely for enterprise customers.
+      Started Bachelor in Business Administration to complement technical skills with business acumen.
+      Completed one year before focusing entirely on technical career.
     `,
-    startsAt: new Date('2002'),
-    endsAt: undefined,
-    remote: true,
-    position: 'Full Stack Developer',
+    startsAt: new Date('2012'),
+    endsAt: new Date('2013'),
+    graduiation: 'Business Administration (incomplete)',
     skills: {
-      nodejs,
-      rails,
-      react,
-      php,
-      mongodb,
-      psql,
-      mariadb,
-      stylus,
-      less,
-      scss,
-      svg,
+      consulting,
     },
   },
 ];

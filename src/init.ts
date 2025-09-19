@@ -9,7 +9,7 @@ let theme = 0;
 const themeCount = 3;
 
 if (state.language === undefined) {
-  state.language = languages[Math.floor(Math.random() * languages.length)];
+  state.language = Language.php;
 }
 
 document.addEventListener('keydown', function(e) {
@@ -21,6 +21,10 @@ document.addEventListener('keydown', function(e) {
         document.body.classList.remove(`theme-${i}`);
       }
       document.body.classList.add(`theme-${theme % themeCount}`);
+      break;
+    }
+    case 80: {
+      state.language = Language.php;
       break;
     }
     case 82: {
@@ -63,11 +67,14 @@ Vue.mixin({
     isRuby() {
       return this.state.currentLanguage === Language.ruby;
     },
+    isPhp() {
+      return this.state.currentLanguage === Language.php;
+    },
   },
 });
 
 console.log(
-  '%c~/tamino.dev %c%c  master %c cat %cREADME.md\n\n%c# tamino.dev\n\nCheck out the source on [GitHub](https://github.com/tamino-martinius/tamino.dev)',
+  '%c~/pedrosantiago.com.br %c%c  main%c cat %cREADME.md\n\n%c# pedrosantiago.com.br\n\nPortfolio of Pedro Oliveira - CTO as a Service & PHP Specialist',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #2E8CCF; color: #000000;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #2E8CCF;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #000000;',

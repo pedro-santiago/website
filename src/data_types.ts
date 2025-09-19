@@ -13,9 +13,10 @@ export enum Language {
   ruby,
   typescript,
   javascript,
+  php,
 }
 
-export const languages: Language[] = [Language.ruby, Language.typescript, Language.javascript];
+export const languages: Language[] = [Language.php, Language.ruby, Language.typescript, Language.javascript];
 
 export interface Stage {
   description?: string;
@@ -72,6 +73,10 @@ export class State {
     document.body.classList.add(this.getLanguageClass(lang));
     const title = document.title.substr(0, document.title.length - 2);
     switch (lang) {
+      case Language.php: {
+        document.title = title + 'php';
+        break;
+      }
       case Language.ruby: {
         document.title = title + 'rb';
         break;
@@ -92,11 +97,11 @@ export class LanguageHelper {
   constructor(private language: Language) {}
 
   get commentChar() {
-    return this.language === Language.ruby ? '#' : '*';
+    return this.language === Language.ruby || this.language === Language.php ? '#' : '*';
   }
 
   get commentEnd() {
-    return this.language === Language.ruby ? '#' : '/';
+    return this.language === Language.ruby || this.language === Language.php ? '#' : '/';
   }
 
   get multilineString() {
@@ -104,10 +109,12 @@ export class LanguageHelper {
   }
 
   get comment() {
-    return this.language === Language.ruby ? '#' : '//';
+    return this.language === Language.ruby || this.language === Language.php ? '#' : '//';
   }
 
   get undefined() {
-    return this.language === Language.ruby ? 'nil' : 'undefined';
+    if (this.language === Language.ruby) return 'nil';
+    if (this.language === Language.php) return 'null';
+    return 'undefined';
   }
 }
