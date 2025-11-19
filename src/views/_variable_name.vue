@@ -1,6 +1,6 @@
 <template>
   <span class="variable">
-    {{ displayName
+    <span v-if="isPhp">$</span>{{ displayName
     }}<template v-if="padLeft">
       <span v-for="i in padLeft" :key="i" class="white-space space"></span>
     </template>

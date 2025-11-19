@@ -1,12 +1,13 @@
 <template>
   <Stage
     class="education"
+    className="Education"
     :abbreviation="`${startYear}-${endYear} - ${data.university} - ${data.graduiation}`"
     :data="data"
     :isLast="isLast"
   >
     <CodeLine>
-      <Tab /><Tab />
+      <Tab /><Tab /><Tab /><Tab />
       <VariableName name="university" />
       <span class="expression">:</span>
       <span class="white-space space"></span>
@@ -14,7 +15,7 @@
       <span class="expression">,</span>
     </CodeLine>
     <CodeLine>
-      <Tab /><Tab />
+      <Tab /><Tab /><Tab /><Tab />
       <VariableName name="graduiation" />
       <span class="expression">:</span>
       <span class="white-space space"></span>

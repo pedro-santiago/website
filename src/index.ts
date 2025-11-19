@@ -1,8 +1,7 @@
-import Vue from 'vue';
-import './init';
+import { createApp } from 'vue';
+import { setupMixin } from './init';
 import View from './views/index.vue';
 
-new Vue({
-  el: '#view',
-  render: display => display(View),
-});
+const app = createApp(View);
+setupMixin(app);
+app.mount('#view');

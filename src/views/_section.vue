@@ -1,62 +1,27 @@
 <template>
   <div class="section" :data-value="title">
+    <!-- Section Header as Laravel-style Comment Block -->
     <CodeLine>
-      <span class="comment">{{ state.currentLanguageHelper.commentEnd }}</span>
-      <template v-for="section in sections">
-        <span
-          class="comment"
-          :class="{
-            collapsible: title !== section,
-            active: title === section,
-          }"
-          :key="`comment-${section}`"
-          >{{ stars(section) }}</span
-        >
-      </template>
-      <span class="comment">
-        {{ state.currentLanguageHelper.commentChar }}{{ state.currentLanguageHelper.commentChar }}
-      </span>
+      <Tab />
+      <span class="comment">/**</span>
     </CodeLine>
     <CodeLine>
-      <span class="comment">{{ state.currentLanguageHelper.commentChar }}</span>
-      <template v-for="section in sections">
-        <span
-          class="white-space space"
-          :class="{
-            collapsible: title !== section,
-          }"
-          :key="`space-${section}`"
-        />
+      <Tab />
+      <span class="comment">{{ state.currentLanguageHelper.commentChar }} {{ title }}:</span>
+      <span class="white-space space"></span>
+      <template v-for="(section, index) in sections" :key="`section-${section}`">
         <span
           class="comment selectable"
-          :class="{
-            collapsible: title !== section,
-            active: title === section,
-          }"
-          :key="`comment-${section}`"
+          :class="{ active: title === section }"
           @click="scrollToSection(section)"
-          >{{ section }}</span
-        >
+        >{{ section }}</span>
+        <span v-if="index < sections.length - 1" class="comment">,</span>
+        <span v-if="index < sections.length - 1" class="white-space space"></span>
       </template>
-      <span class="white-space space" :key="`space-${section}`"></span>
-      <span class="comment">{{ state.currentLanguageHelper.commentChar }}</span>
     </CodeLine>
     <CodeLine>
-      <span class="comment">{{ state.currentLanguageHelper.commentChar }}</span>
-      <template v-for="section in sections">
-        <span
-          class="comment"
-          :class="{
-            collapsible: title !== section,
-            active: title === section,
-          }"
-          :key="`comment-${section}`"
-          >{{ stars(section) }}</span
-        >
-      </template>
-      <span class="comment">
-        {{ state.currentLanguageHelper.commentChar }}{{ state.currentLanguageHelper.commentEnd }}
-      </span>
+      <Tab />
+      <span class="comment">{{ state.currentLanguageHelper.commentEnd }}/</span>
     </CodeLine>
   </div>
 </template>
@@ -66,13 +31,11 @@ import { Section } from '../data_types';
 import { animate, Easing, track } from '../util';
 
 import CodeLine from './_code_line.vue';
+import Tab from './_tab.vue';
 
 export default {
   props: ['section'],
   methods: {
-    stars(str: string) {
-      return new Array(str.length + 2).join(this.state.currentLanguageHelper.commentChar);
-    },
     scrollToSection(name: string) {
       if (name !== this.title) {
         track('navigateTo', name);
@@ -98,6 +61,7 @@ export default {
   },
   components: {
     CodeLine,
+    Tab,
   },
 };
 </script>

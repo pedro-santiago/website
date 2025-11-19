@@ -10,8 +10,8 @@
           :key="subset.title"
         />
       </template>
-      <template v-else v-for="(skill, name) in skillset.data">
-        <Skill :name="name" :skill="skill" :key="name" />
+      <template v-else v-for="(skill, name) in skillset.data" :key="name">
+        <Skill :name="name" :skill="skill" />
       </template>
       <CodeLine />
     </template>

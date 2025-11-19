@@ -2,23 +2,52 @@
   <div id="view" class="hidden">
     <CookieInfo />
     <CodeLine />
+    <ClassDeclaration />
+    <CodeLine />
     <Profile :data="data" />
-    <Section :section="Section.Skills"></Section>
+    <Constructor :yearsOfExperience="data.yearsOfExperience" />
+    <Navigation />
     <CodeLine />
-    <template v-for="skillset in data.skills">
-      <SkillSet :title="skillset.title" :skillset="skillset" :key="skillset.title" />
-    </template>
+    <Section :section="Section.About"></Section>
     <CodeLine />
-    <Section :section="Section.CurriculumVitae"></Section>
+    <About :text="data.about" />
     <CodeLine />
-    <CurriculumVitae :data="data.curriculumVitae" />
+    <Section :section="Section.TechStack"></Section>
+    <CodeLine />
+    <Method methodName="developBackend" :data="data.backendStack" />
+    <Method methodName="developFrontend" :data="data.frontendStack" />
+    <Method methodName="architectSolutions" :data="data.cloudArchitecture" />
+    <CodeLine />
+    <Section :section="Section.CreditExpertise"></Section>
+    <CodeLine />
+    <Method methodName="buildCreditScoringSystem" :data="data.creditScoringSystem" />
+    <CodeLine />
+    <Section :section="Section.FintechSkills"></Section>
+    <CodeLine />
+    <Method methodName="processBankingAPIs" :data="data.bankingAPIs" />
+    <Method methodName="buildSaaSArchitecture" :data="data.saasArchitecture" />
+    <CodeLine />
+    <Section :section="Section.Experience"></Section>
+    <CodeLine />
+    <CurriculumVitae :data="data.experience" />
     <CodeLine />
     <CodeLine />
-    <ShowCaseSection :section="Section.Experiments" name="experiments" :data="data.experiments" />
-    <ShowCaseSection :section="Section.Projects" name="projects" :data="data.projects" />
-    <ShowCaseSection :section="Section.Talks" name="talks" :data="data.talks" />
-    <ShowCaseSection :section="Section.Packages" name="packages" :data="data.packages" />
-    <ShowCaseSection :section="Section.Misc" name="misc" :data="data.misc" />
+    <Section :section="Section.CurrentProjects"></Section>
+    <CodeLine />
+    <Method methodName="getCurrentProjects" :data="data.currentProjects" />
+    <CodeLine />
+    <Section :section="Section.Customers"></Section>
+    <CodeLine />
+    <Customers :data="data.customers" />
+    <CodeLine />
+    <CodeLine />
+    <Section :section="Section.AcademicBackground"></Section>
+    <CodeLine />
+    <CurriculumVitae :data="data.academicBackground" />
+    <CodeLine />
+    <CodeLine />
+    <ClassClosing />
+    <CodeLine />
     <Legal />
     <CodeLine />
     <Privacy />
@@ -31,12 +60,18 @@ import * as data from '../data';
 import SkillSet from './_skill_set.vue';
 import Section from './_section.vue';
 import CodeLine from './_code_line.vue';
+import ClassDeclaration from './_class_declaration.vue';
+import ClassClosing from './_class_closing.vue';
 import CurriculumVitae from './_curriculum_vitae.vue';
-import ShowCaseSection from './_show_case_section.vue';
+import Customers from './_customers.vue';
+import About from './_about.vue';
 import Legal from './_legal.vue';
 import Privacy from './_privacy.vue';
 import Profile from './_profile.vue';
 import CookieInfo from './_cookie_info.vue';
+import Navigation from './_navigation.vue';
+import Method from './_method.vue';
+import Constructor from './_constructor.vue';
 
 export default {
   data() {
@@ -53,12 +88,18 @@ export default {
     SkillSet,
     Section,
     CodeLine,
+    ClassDeclaration,
+    ClassClosing,
     CurriculumVitae,
-    ShowCaseSection,
+    Customers,
+    About,
     Legal,
     Privacy,
     Profile,
     CookieInfo,
+    Navigation,
+    Method,
+    Constructor,
   },
 };
 </script>

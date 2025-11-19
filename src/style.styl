@@ -3,12 +3,13 @@ body.theme-1 {
   --color-white-space: #3C4049;
   --color-collapsed: #3C4049;
   --color-comment: #5C6370;
-  --color-variable: #ABB2BF;
+  --color-variable: #E06C75;
   --color-expression: #ABB2BF;
   --color-storage-type: #C678DD;
-  --color-keyword: #61AFEF;
-  --color-type: #E5C07B;
+  --color-keyword: #C678DD;
+  --color-type: #61AFEF;
   --color-class: #E5C07B;
+  --color-function: #61AFEF;
   --color-string: #98C379;
   --color-constant: #D19A66;
   --color-number: #D19A66;
@@ -19,12 +20,13 @@ body.theme-2 {
   --color-white-space: #D3D4D5;
   --color-collapsed: #D3D4D5;
   --color-comment: #A0A1A7;
-  --color-variable: #383A42;
+  --color-variable: #E45649;
   --color-expression: #383A42;
   --color-storage-type: #A626A4;
-  --color-keyword: #4078F2;
-  --color-type: #C18401;
+  --color-keyword: #A626A4;
+  --color-type: #0184BC;
   --color-class: #C18401;
+  --color-function: #4078F2;
   --color-string: #50A14F;
   --color-constant: #986801;
   --color-number: #986801;
@@ -69,6 +71,7 @@ body.theme-2 {
 .constant { color: var(--color-constant); }
 .number { color: var(--color-number); }
 .collapsed { color: var(--color-collapsed); }
+.function { color: var(--color-function); }
 
 .tab { box-shadow: -1px 0 0 var(--color-white-space); }
 
@@ -102,7 +105,9 @@ body.theme-2 {
 
 .legal,
 .skillset,
-.stage {
+.stage,
+.method,
+.about {
   cursor: n-resize;
   &.collapsed {
     cursor: s-resize;

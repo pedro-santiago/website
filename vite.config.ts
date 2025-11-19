@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue2';
+import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
 import { resolve } from 'path';
 
@@ -34,7 +34,7 @@ export default defineConfig({
       manifest: {
         name: '~/pedrosantiago.com.br/main.php',
         short_name: 'Pedro Santiago',
-        description: 'Portfolio of Pedro Oliveira - CTO as a Service & PHP Specialist',
+        description: 'Portfolio of Pedro Santiago - CTO as a Service & PHP Specialist',
         theme_color: '#272822',
         background_color: '#272822',
         display: 'standalone',
@@ -55,9 +55,6 @@ export default defineConfig({
   ],
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
-    alias: {
-      vue: 'vue/dist/vue.esm.js',
-    },
   },
   build: {
     outDir: resolve(__dirname, 'dist'),

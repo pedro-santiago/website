@@ -2,19 +2,159 @@
   <div class="profile">
     <Section :section="Section.Profile"></Section>
     <CodeLine />
-    <Variable name="myName">
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">string</span>
+      <span class="white-space space"></span>
+      <span class="variable">$fullName</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
       <String :value="data.myName"></String>
-    </Variable>
-    <Variable name="profession">
+      <span class="expression">;</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">string</span>
+      <span class="white-space space"></span>
+      <span class="variable">$currentRole</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
       <String :value="data.profession"></String>
-    </Variable>
-    <Variable name="email">
-      <String :value="email"></String>
-    </Variable>
+      <span class="expression">;</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">string</span>
+      <span class="white-space space"></span>
+      <span class="variable">$location</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
+      <String :value="data.city"></String>
+      <span class="expression">;</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">string</span>
+      <span class="white-space space"></span>
+      <span class="variable">$workMode</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
+      <String value="Remote"></String>
+      <span class="expression">;</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="type class">DateTime</span>
+      <span class="white-space space"></span>
+      <span class="variable">$careerStart</span>
+      <span class="expression">;</span>
+      <span class="white-space space"></span>
+      <span class="comment">// {{ data.careerStartYear }}</span>
+    </CodeLine>
     <CodeLine />
-    <Variable v-for="(url, name) in data.socialNetworks" :key="name" :name="name">
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">array</span>
+      <span class="white-space space"></span>
+      <span class="variable">$contact</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
+      <span class="expression">[</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab /><Tab />
+      <span class="string">'email'</span>
+      <span class="white-space space"></span>
+      <span class="keyword">=></span>
+      <span class="white-space space"></span>
+      <Url :value="emailLink"></Url>
+      <span class="expression">,</span>
+    </CodeLine>
+    <CodeLine v-for="(url, name) in data.socialNetworks" :key="name">
+      <Tab /><Tab />
+      <span class="string">'{{ name }}'</span>
+      <span class="white-space space"></span>
+      <span class="keyword">=></span>
+      <span class="white-space space"></span>
       <Url :value="url"></Url>
-    </Variable>
+      <span class="expression">,</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="expression">]</span>
+      <span class="expression">;</span>
+    </CodeLine>
+    <CodeLine />
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">array</span>
+      <span class="white-space space"></span>
+      <span class="variable">$languages</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
+      <span class="expression">[</span>
+    </CodeLine>
+    <CodeLine v-for="(level, lang) in data.languages" :key="lang">
+      <Tab /><Tab />
+      <span class="string">'{{ lang }}'</span>
+      <span class="white-space space"></span>
+      <span class="keyword">=></span>
+      <span class="white-space space"></span>
+      <String :value="level"></String>
+      <span class="expression">,</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="expression">]</span>
+      <span class="expression">;</span>
+    </CodeLine>
+    <CodeLine />
+    <CodeLine>
+      <Tab />
+      <span class="keyword">private</span>
+      <span class="white-space space"></span>
+      <span class="keyword">array</span>
+      <span class="white-space space"></span>
+      <span class="variable">$passions</span>
+      <span class="white-space space"></span>
+      <span class="expression">=</span>
+      <span class="white-space space"></span>
+      <span class="expression">[</span>
+    </CodeLine>
+    <CodeLine v-for="(description, passion) in data.passions" :key="passion">
+      <Tab /><Tab />
+      <span class="string">'{{ passion }}'</span>
+      <span class="white-space space"></span>
+      <span class="keyword">=></span>
+      <span class="white-space space"></span>
+      <String :value="description"></String>
+      <span class="expression">,</span>
+    </CodeLine>
+    <CodeLine>
+      <Tab />
+      <span class="expression">]</span>
+      <span class="expression">;</span>
+    </CodeLine>
     <CodeLine />
     <CodeLine />
   </div>
@@ -28,6 +168,7 @@ import Variable from './_variable.vue';
 import String from './_string.vue';
 import Url from './_url.vue';
 import Section from './_section.vue';
+import Tab from './_tab.vue';
 
 export default {
   props: ['data'],
@@ -36,6 +177,9 @@ export default {
       const emails = this.data.emails;
       return emails[Math.floor(Math.random() * emails.length)];
     },
+    emailLink() {
+      return 'mailto:' + this.email;
+    },
   },
   components: {
     CodeLine,
@@ -43,6 +187,7 @@ export default {
     String,
     Url,
     Section,
+    Tab,
   },
 };
 </script>

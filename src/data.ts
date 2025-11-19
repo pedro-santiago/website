@@ -1,4 +1,4 @@
-import { Education, Job, ShowCase, Skill, SkillSet, Stage, State } from './data_types';
+import { Customer, Education, Job, ShowCase, Skill, SkillSet, Stage, State } from './data_types';
 
 /********
  * State *
@@ -10,15 +10,41 @@ export const state = new State();
  * Header *
  *********/
 
-export const myName = 'Pedro Oliveira';
-export const profession = 'CTO as a Service & PHP Specialist';
-export const street = 'Brazil';
+export const myName = 'Pedro Oliveira Santiago';
+export const profession = 'Senior Full Stack Developer | CTO as a Service';
+export const street = 'Brazil 🇧🇷';
 export const postalCode = '';
-export const city = 'Remote';
+export const city = 'Belo Horizonte - Remote';
 export const emails: string[] = ['pedro@pedrosantiago.com.br'];
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/pedro-santiago',
   linkedin: 'https://www.linkedin.com/in/pedro-oliveira-santiago',
+  website: 'https://pedrosantiago.com.br',
+};
+
+export const careerStartYear = 2009;
+export const yearsOfExperience = new Date().getFullYear() - careerStartYear;
+
+export const contact = {
+  email: 'pedro@pedrosantiago.com.br',
+  github: 'https://github.com/pedro-santiago',
+  linkedin: 'https://www.linkedin.com/in/pedro-oliveira-santiago',
+  website: 'https://pedrosantiago.com.br'
+};
+
+export const languages = {
+  Portuguese: 'Native',
+  English: 'Professional',
+  German: 'B2',
+  Spanish: 'Intermediate',
+  PHP: 'Fluent ❤️'
+};
+
+export const passions = {
+  credit_analysis: 'Building smart credit scoring systems',
+  risk_assessment: 'Automating financial risk evaluation',
+  new_tech: 'Always excited about the next innovation',
+  clean_code: 'Crafting elegant solutions to complex problems'
 };
 
 /*********
@@ -235,11 +261,136 @@ export const skills: SkillSet[] = [
   },
 ];
 
+/***********
+ * About Me *
+ ***********/
+
+export const about = `
+  I bridge the gap between technology and finance, specializing in building robust fintech platforms
+  that transform how financial institutions operate. With over ${yearsOfExperience} years architecting systems for
+  receivables platforms, digital wallets, payment processing, and investment funds, I understand both
+  the technical complexity and regulatory demands of financial software.
+
+  My expertise lies in translating financial business requirements into scalable technical solutions—
+  from integrating banking APIs and tokenization systems to designing SaaS architectures that support
+  complex licensing models and real-time transaction processing.
+
+  I'm particularly passionate about credit-related fintechs, where technology can democratize access
+  to financial services and create smarter, fairer lending decisions through data and automation.
+
+  What drives me? The excitement of solving complex problems with elegant code and seeing technology
+  transform traditional financial services into something more accessible and efficient.
+`;
+
+/**********************
+ * Backend Development *
+ **********************/
+
+export const backendStack = {
+  php: ['Laravel', 'Symfony', 'Lumen', 'PHP 8.3+'],
+  architecture: ['Microservices', 'Multi-tenant SaaS', 'Event-Driven', 'DDD'],
+  databases: ['PostgreSQL', 'MySQL', 'Redis', 'MongoDB'],
+  messaging: ['RabbitMQ', 'Kafka', 'SQS'],
+  apis: ['REST', 'GraphQL', 'gRPC', 'Webhook Systems'],
+  best_practices: ['SOLID', 'TDD', 'Clean Architecture', 'Design Patterns']
+};
+
+/***********************
+ * Frontend Development *
+ ***********************/
+
+export const frontendStack = {
+  frameworks: ['Vue.js 3', 'Nuxt.js', 'React', 'Next.js'],
+  ui_libraries: ['Tailwind CSS', 'Vuetify', 'Element Plus', 'shadcn/ui'],
+  tools: ['Vite', 'Webpack', 'TypeScript', 'Pinia/Vuex'],
+  approaches: ['SPA', 'SSR', 'SSG', 'PWA']
+};
+
+/*********************
+ * Cloud Architecture *
+ *********************/
+
+export const cloudArchitecture = {
+  cloud: {
+    AWS: ['EC2', 'RDS', 'Lambda', 'S3', 'CloudFront', 'SQS']
+  },
+  devops: ['Docker', 'Kubernetes', 'CI/CD', 'GitHub Actions', 'Terraform'],
+  monitoring: ['New Relic', 'Datadog', 'CloudWatch', 'Sentry', 'Laravel Telescope'],
+  patterns: ['SOLID', 'Clean Architecture', 'CQRS', 'Repository Pattern'],
+  philosophy: 'Simple solutions for complex problems'
+};
+
+/***********************
+ * Credit & Fintech Expertise *
+ ***********************/
+
+export const creditScoringSystem = {
+  data_sources: ['Credit bureaus', 'Open Banking', 'Alternative data'],
+  algorithms: ['Machine Learning models', 'Rule-based engines', 'Hybrid approaches'],
+  compliance: ['Fair lending', 'LGPD/GDPR', 'Explainable AI'],
+  real_impact: 'Helping thousands access fair credit through technology'
+};
+
+export const bankingAPIs = {
+  integrations: ['Stark Bank', 'Open Banking APIs', 'PIX', 'TED/DOC'],
+  compliance: ['PCI DSS', 'LGPD', 'KYC/AML', 'BACEN Regulations'],
+  features: ['Digital Wallets', 'Card Issuance', 'Payment Processing', 'Tokenization'],
+  expertise: 'Deep understanding of Brazilian financial ecosystem'
+};
+
+export const saasArchitecture = {
+  multi_tenancy: ['Database per tenant', 'Shared database with RLS'],
+  billing: ['Subscription models', 'Usage-based pricing', 'License management'],
+  scalability: ['Horizontal scaling', 'Load balancing', 'Caching strategies'],
+  features: ['White-label solutions', 'API rate limiting', 'Audit trails'],
+  approach: 'Build for scale from day one, optimize as you grow'
+};
+
 /*******************
- * Curriculum Vitae *
+ * Current Projects *
  *******************/
 
-export const curriculumVitae: (Job | Education)[] = [
+export const currentProjects = {
+  receivables_platform: {
+    description: 'Building tokenized receivables trading platform',
+    stack: ['Laravel 11', 'Vue 3', 'PostgreSQL', 'AWS'],
+    excitement: 'Revolutionizing how SMBs access working capital'
+  },
+  credit_scoring_engine: {
+    description: 'ML-powered credit analysis for instant decisions',
+    tech: ['Python ML models', 'Laravel API', 'Real-time processing'],
+    impact: 'Reducing credit decision time from days to seconds'
+  }
+};
+
+/********************
+ * Currently Exploring *
+ ********************/
+
+export const currentlyExploring = {
+  'AI/ML in credit': 'Exploring GPT models for financial analysis',
+  'Blockchain': 'Smart contracts for receivables tokenization',
+  'Real-time systems': 'Building ultra-low latency financial systems',
+  'New Laravel features': 'Always excited about what Taylor is cooking up next'
+};
+
+/***************
+ * Core Values *
+ ***************/
+
+export const coreValues = {
+  passion: 'Genuine excitement for solving complex problems',
+  quality: 'Writing code that\'s maintainable and scalable',
+  innovation: 'Always exploring better ways to build things',
+  collaboration: 'Sharing knowledge and learning from others',
+  results: 'Delivering solutions that make real business impact'
+};
+
+/*************
+ * Experience *
+ *************/
+
+export const experience: Job[] = [
   {
     company: 'CTO as a Service',
     description: `
@@ -469,7 +620,81 @@ export const curriculumVitae: (Job | Education)[] = [
       mysql,
     },
   },
+];
 
+/*************
+ * Customers *
+ *************/
+
+export const customers: Customer[] = [
+  {
+    client: 'Investment Fund Platform',
+    project: 'Receivables Trading Platform',
+    description: `
+      Architected and built a complete investment fund platform for trading receivables.
+      Implemented secure transaction processing, investor dashboards, and regulatory compliance features.
+      Integrated with financial institutions for automated settlement and reconciliation.
+    `,
+    startsAt: new Date('2024-06'),
+    endsAt: undefined,
+    skills: {
+      laravel,
+      php,
+      mysql,
+      redis,
+      s3,
+      ec2,
+      api,
+      saasDesign,
+      systemsArchitecture,
+    },
+  },
+  {
+    client: 'Stark Bank',
+    project: 'Digital Wallet & Card Issuance Integration',
+    description: `
+      Integrated Stark Bank APIs for digital wallet functionality, tokenization services, and
+      digital card issuance. Implemented secure payment processing, card management, and
+      real-time transaction monitoring for fintech platform.
+    `,
+    startsAt: new Date('2024-03'),
+    endsAt: new Date('2024-11'),
+    skills: {
+      laravel,
+      php,
+      api,
+      redis,
+      mysql,
+      security,
+    },
+  },
+  {
+    client: 'Data Engineering Platform',
+    project: 'ETL Migration from Pentaho to AWS',
+    description: `
+      Migrated complex ETL pipelines from on-premise Pentaho to AWS cloud infrastructure.
+      Redesigned data workflows for improved performance and scalability, implementing
+      automated data validation and error handling for financial data processing.
+    `,
+    startsAt: new Date('2024-01'),
+    endsAt: new Date('2024-06'),
+    skills: {
+      pentaho,
+      etl,
+      s3,
+      ec2,
+      lambda,
+      nodejs,
+      systemsArchitecture,
+    },
+  },
+];
+
+/**********************
+ * Academic Background *
+ **********************/
+
+export const academicBackground: Education[] = [
   {
     university: 'PUC Minas',
     description: `
@@ -498,780 +723,5 @@ export const curriculumVitae: (Job | Education)[] = [
     skills: {
       consulting,
     },
-  },
-];
-
-/**************
- * Experiments *
- **************/
-
-export const experiments: ShowCase[] = [
-  {
-    name: 'Hamburder Icon Animations',
-    description: `
-      I created a couple of different hamburger menu icon animations to open
-      and close a menu. All icons are planned with sketch. The base svgs are all
-      hand written with basic svg path commands. The icons are previewed on
-      dribbble and the code is available Open Source at CodePen.
-    `,
-    startsAt: new Date('2014-08-05'),
-    endsAt: new Date('2018-08-06'),
-    urls: [
-      'https://dribbble.com/shots/4921561-Hamburger-Menu-Animation',
-      'https://dribbble.com/shots/3539398--version-3',
-      'https://dribbble.com/shots/3529235--version-2',
-      'https://dribbble.com/shots/1674602-Menu-open-back',
-      'https://dribbble.com/shots/1671182--version-1',
-    ],
-    media: [],
-    skills: {
-      svg,
-      ui,
-      ux,
-      css,
-      stylus,
-      html,
-      js,
-      sketch,
-    },
-  },
-
-  {
-    name: 'Button Animations',
-    description: `
-      I created a couple of different Buttons which are planned to be the main
-      call to action buttons on a website. All buttons are previewed on dribbble
-      and the code is available Open Source at CodePen.
-    `,
-    startsAt: new Date('2014-08-05'),
-    endsAt: new Date('2017-07-02'),
-    urls: [
-      'https://dribbble.com/shots/3545734-Liquid-button-v2',
-      'https://dribbble.com/shots/2629106-Button-Group',
-      'https://dribbble.com/shots/1673204-Submit-Button',
-    ],
-    media: [],
-    skills: {
-      svg,
-      ui,
-      ux,
-      css,
-      stylus,
-      html,
-      js,
-      sketch,
-    },
-  },
-
-  {
-    name: 'Particle Effects',
-    description: `
-      I experimented a lot to find a the best way to create performant three
-      dimensional particle effects on a 2d canvas before WebGL was available at
-      Browsers.
-    `,
-    startsAt: new Date('2014-08-05'),
-    endsAt: new Date('2017-07-02'),
-    urls: ['https://dribbble.com/shots/2649284-Dusty-Particle-Sphere'],
-    media: [],
-    skills: {
-      html,
-      js,
-    },
-  },
-
-  {
-    name: 'Icon Animations',
-    description: `
-      I created a couple of different icon transitions which are based on
-      svg paths. All icons are planned with sketch. The base svgs are all
-      hand written with basic svg path commands. The icons are previewed on
-      dribbble and the code is available Open Source at CodePen.
-    `,
-    startsAt: new Date('2014-08-15'),
-    endsAt: new Date('2016-04-15'),
-    urls: [
-      'https://dribbble.com/shots/2654081-Download-icon-progress',
-      'https://dribbble.com/shots/1989179-Animated-search-progress-icon',
-      'https://dribbble.com/shots/1685755-Anited-sort-button',
-      'https://dribbble.com/shots/1684424-SVG-Path-Animation-Experiment',
-    ],
-    media: [],
-    skills: {
-      svg,
-      ui,
-      ux,
-      css,
-      stylus,
-      html,
-      js,
-      sketch,
-    },
-  },
-
-  {
-    name: 'After Effects/Blender Render',
-    description: `
-      Some of my dribbble shots are rendered with Blender and After Effects.
-    `,
-    startsAt: new Date('2014-05-30'),
-    endsAt: new Date('2017-07-01'),
-    urls: [
-      'https://dribbble.com/shots/3536783-Rendered-cubes-landsape',
-      'https://dribbble.com/shots/1625077-fluid-5',
-      'https://dribbble.com/shots/1599550-Liquid-Germany',
-      'https://dribbble.com/shots/1588162-Shop-Admin-Wireframe-WIP',
-      'https://dribbble.com/shots/1581191-Cloud-Upload',
-      'https://dribbble.com/shots/1575639-hello-dribbble',
-    ],
-    media: [],
-    skills: {
-      afterEffects,
-      blender,
-    },
-  },
-];
-
-/***********
- * Projects *
- ***********/
-
-export const projects: ShowCase[] = [
-  {
-    name: 'Hashflag Gallery',
-    description: `
-      I created the website hashflaggallery.com together with Andreas Storm.
-      This site collects all static and animated Hashflags from Twitter and
-      displayes them in a unique library. I'm responsibe for the whole
-      Teach-Stack and Coding. Andreas is responsible for Design & Marketing.
-    `,
-    startsAt: new Date('2020-09-01'),
-    endsAt: undefined,
-    urls: [
-      'https://hashflaggallery.com',
-      'https://codepen.io/collection/DoJqWO',
-      'https://twitter.com/HashflagGallery',
-    ],
-    media: [],
-    skills: {
-      beanstalk,
-      redis,
-      nodejs,
-      react,
-      scss,
-    },
-  },
-
-  {
-    name: 'Check it done',
-    description: `
-      As a developer I created a lot of To-Do Apps (basically whenever i tried
-      a new technology). I'm not completely happy with any To-Do app i tested
-      and finally during Covid I started this project together with Andreas,
-      Martin and Aaron. Andreas and Martin are the most talented designers i
-      know and Aaron is a genius in user interaction and animation design.
-      I'm responsible for the complete Tech-Stack including the UI basics.
-    `,
-    startsAt: new Date('2020-08-01'),
-    endsAt: undefined,
-    urls: ['https://usecheck.com', 'https://twitter.com/joincheck'],
-    media: [],
-    skills: {
-      beanstalk,
-      redis,
-      nodejs,
-      react,
-      scss,
-    },
-  },
-
-  {
-    name: 'GitHub Commit Vizualization',
-    description: `
-      I build a lambda function wich regulary checks my GitHub account for new
-      commits and display them at [contributions.tamino.dev]. The data fetching
-      and the UI are both open source available at GitHub
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: [
-      'https://contributions.tamino.dev/',
-      'https://dribbble.com/shots/4884965-GitHub-Contribution-Visualization',
-      'https://github.com/tamino-martinius/contributions.taminomartinius.de',
-      'https://github.com/tamino-martinius/lambda-get-all-github-contributions',
-    ],
-    media: [],
-    skills: {
-      s3,
-      cloudfront,
-      nodejs,
-      lambda,
-      typescript,
-      stylus,
-      html,
-      vuejs,
-      git,
-    },
-  },
-
-  {
-    name: 'Squoint',
-    description: `
-      Squoint is a puzzle game which is optimized for mobile devices and touch
-      gestures. The game is currently in closed beta and will be launched soon.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: ['https://squoint.com'],
-    media: [],
-    skills: {
-      s3,
-      cloudfront,
-      nodejs,
-      ec2,
-      lambda,
-      typescript,
-      stylus,
-      html,
-      vuejs,
-    },
-  },
-
-  {
-    name: 'Colourcode',
-    description: `
-      Colourcode was created to make my life easier to create Websites for my
-      customers. With colourcode i was able to find quickly new color schemes
-      which match to the corporate identity of my clients.
-    `,
-    startsAt: new Date('2013'),
-    endsAt: undefined,
-    urls: ['https://colourco.de/', 'https://github.com/tamino-martinius/colourco.de'],
-    media: [],
-    skills: {
-      s3,
-      cloudfront,
-      typescript,
-      coffeescript,
-      nodejs,
-      stylus,
-      html,
-      handlebars,
-      vuejs,
-    },
-  },
-
-  {
-    name: 'NextParticle',
-    description: `
-      NextParticle is the evolution of ParticleSlider. It's a complete rewrite
-      of the code to improve the performance and make it easier to customize for
-      the customers. The markup based initialization made it easier to create
-      a wordpress plugin.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: ['https://nextparticle.nextco.de/'],
-    media: [],
-    skills: {
-      s3,
-      cloudfront,
-      lambda,
-      nodejs,
-      psql,
-      typescript,
-      html,
-      stylus,
-      vuejs,
-    },
-  },
-
-  {
-    name: 'GetShares',
-    description: `
-      GetShares is created to track you social media counts on all common
-      social networks around the globe. It is also possible to create a unified
-      look of all social media buttons.
-    `,
-    startsAt: new Date('2014'),
-    endsAt: new Date('2017'),
-    urls: [
-      'http://www.getshar.es/',
-      'https://github.com/tamino-martinius/www.getshar.es',
-      'https://github.com/tamino-martinius/api.getshar.es',
-    ],
-    media: [],
-    skills: {
-      s3,
-      cloudfront,
-      nodejs,
-      js,
-      html,
-      stylus,
-      handlebars,
-    },
-  },
-
-  {
-    name: 'ParticleSlider',
-    description: `
-      ParticleSlider is created based on my research of Particle effect
-      rendering on a 2d canvas. It's possible to create amazing Particle
-      Effects based on simple png images. ParticleSlider is discontinued
-      since NextParticle is now available. All customers of ParticleSlider
-      a version of NextParticle for free.
-    `,
-    startsAt: new Date('2014'),
-    endsAt: new Date('2017'),
-    urls: ['https://nextparticle.nextco.de/', 'http://particleslider.de/'],
-    media: [],
-    skills: {
-      ec2,
-      coffeescript,
-      js,
-      html,
-      css,
-    },
-  },
-
-  {
-    name: 'Iary',
-    description: `
-      Iary is a time tracking and reporting solution build as Web Application.
-      It was discontinued in favor of my work at shyftplan. All customers got
-      a complete refund.
-    `,
-    startsAt: new Date('2014'),
-    endsAt: new Date('2017'),
-    urls: [],
-    media: [],
-    skills: {
-      ec2,
-      s3,
-      cloudfront,
-      js,
-      html,
-      nodejs,
-      handlebars,
-      meteor,
-      stylus,
-      websockets,
-    },
-  },
-
-  {
-    name: 'Butlr',
-    description: `
-      Butlr is a automatically generated city guide for all cities in Germany.
-      It shows all Points of Interrest, Restaurants, etc. based on a enriched
-      database build on GeoDB. This project is discontinued with GeoDB.
-    `,
-    startsAt: new Date('2013'),
-    endsAt: new Date('2014'),
-    urls: [],
-    media: [],
-    skills: {
-      s3,
-      cloudfront,
-      nodejs,
-      js,
-      html,
-      stylus,
-      psql,
-      api,
-    },
-  },
-
-  {
-    name: 'GeoDB',
-    description: `
-      GeoDB is a web scraper which is searching for all addresses and their
-      geo coordinates in germany. The data is used on auto completes for
-      Webpages. This project is discontinued becasue it has too high costs
-      for a Website which generates no income.
-    `,
-    startsAt: new Date('2012'),
-    endsAt: new Date('2014'),
-    urls: [],
-    media: [],
-    skills: {
-      nodejs,
-      js,
-      html,
-      stylus,
-      psql,
-      api,
-    },
-  },
-];
-
-/********
- * Talks *
- ********/
-
-export const talks: ShowCase[] = [
-  {
-    name: 'Lets talk about ... New JavaScript Features (2020 Editon)',
-    description: `
-      A yearly overview what happened in JavaScript and whats on the
-      early stages of ECMAScript. An small into to interesting new functions.
-    `,
-    startsAt: new Date('2020'),
-    endsAt: new Date('2020'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--new-js-features--2020',
-      'https://new-js-features--2020.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      nodejs,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... AWS CDK (Cloud Development Kit)',
-    description: `
-      An introduction in the alternative to CloudFormation templates.
-      Create your infrastructure stacks with code.
-    `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2019'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--cdk',
-      'https://cdk.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      nodejs,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... New JavaScript Features (2019 Editon)',
-    description: `
-      A yearly overview what happened in JavaScript and whats on the
-      early stages of ECMAScript. An small into to interesting new functions.
-    `,
-    startsAt: new Date('2019'),
-    endsAt: new Date('2019'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--new-js-features--2019',
-      'https://new-js-features--2019.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      nodejs,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... SAM (Serverless Access Model)',
-    description: `
-      An introduction to the Tooling and concept of Serverless
-      Applications within AWS.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--sam',
-      'https://sam.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      nodejs,
-      lambda,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... API (of shyftplan)',
-    description: `
-      A short introduction of APIs in general and the models of shyftplan in
-      specific. This Talk was a internal presentation for shyftplan.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--api',
-      'https://api.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      api,
-      nodejs,
-      html,
-      stylus,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... New JavaScript Features (2018 Editon)',
-    description: `
-      A yearly overview what happened in JavaScript and whats on the
-      early stages of ECMAScript. An small into to interesting new functions.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--new-js-features--2018',
-      'https://new-js-features--2018.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      nodejs,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... SQL Query Performance',
-    description: `
-      A small guide in writing good and performant SQL Queries which give very
-      responsed even with millions of records. I also explain why/when a database
-      index is useful and which one i should use.
-      This Talk was a internal presentation for shyftplan.
-    `,
-    startsAt: new Date('2018'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--sql-query-performance',
-      'https://sql-query-performance.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      psql,
-      nodejs,
-      html,
-      stylus,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... GraphQL',
-    description: `
-      When should i use GraphlQL and what are the differences to REST and how
-      does a GraphQL API look like from the Consumers and Developers perspective.
-      This Talk was a internal presentation for shyftplan.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: new Date('2017'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--graphql',
-      'https://graphql.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      gql,
-      nodejs,
-      html,
-      stylus,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... TypeScript',
-    description: `
-      A quick introduction to TypeScript and its differenced to JavaScript.
-      This Talk was a internal presentation for shyftplan.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: new Date('2017'),
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--typescript',
-      'https://typescript.lets-talk-about.tamino.dev',
-    ],
-    media: [],
-    skills: {
-      typescript,
-      nodejs,
-      html,
-      stylus,
-    },
-  },
-
-  {
-    name: 'Lets talk about ... Template',
-    description: `
-      A template with example slides. Thats my base branch with which i create
-      my slides for presentations.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--template',
-      'https://github.com/tamino-martinius/lets-talk-about--example',
-    ],
-    media: [],
-    skills: {
-      api,
-      nodejs,
-      html,
-      stylus,
-    },
-  },
-];
-
-/***********
- * Packages *
- ***********/
-
-export const packages: ShowCase[] = [
-  {
-    name: 'Lets talk about ... Template',
-    description: `
-      A template with example slides. Thats my base branch with which i create
-      my slides for presentations.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: undefined,
-    urls: [
-      'https://github.com/tamino-martinius/lets-talk-about--template',
-      'https://github.com/tamino-martinius/lets-talk-about--example',
-    ],
-    media: [],
-    skills: {
-      api,
-      nodejs,
-      html,
-      stylus,
-    },
-  },
-
-  {
-    name: 'Next Model',
-    description: `
-      Next Model is the evolution of Meteor Smart Record. With this package
-      you are able to define Model relations and write database independend
-      queries to fetch data.
-    `,
-    startsAt: new Date('2016'),
-    endsAt: undefined,
-    urls: [
-      'https://github.com/tamino-martinius/node-next-model',
-      'https://github.com/tamino-martinius/node-next-model-api-router',
-      'https://github.com/tamino-martinius/node-next-model-knex-connector',
-      'https://github.com/tamino-martinius/node-next-model-api-server-express',
-      'https://github.com/tamino-martinius/node-next-model-local-storage-connector',
-      'https://github.com/tamino-martinius/node-next-model-api-client-connector',
-    ],
-    media: [],
-    skills: {
-      nodejs,
-      typescript,
-      js,
-      psql,
-      gql,
-      api,
-    },
-  },
-
-  {
-    name: 'Meteor Smart Record',
-    description: `
-      Meteor Smart Record is a package to define Model relations and write
-      MongoDB queries in a simple and object orientated way. It's a dependency
-      for Meteor Smart Form which is a simple way to create forms based on models.
-      This pacakge is discontinued on favor of Next Model which is a Meteor
-      independent solution.
-    `,
-    startsAt: new Date('2015'),
-    endsAt: new Date('2017'),
-    urls: [
-      'https://github.com/tamino-martinius/meteor-smart-record',
-      'https://github.com/tamino-martinius/meteor-smart-form',
-      'https://github.com/tamino-martinius/meteor-smart-form-delete-button',
-    ],
-    media: [],
-    skills: {
-      meteor,
-      js,
-      coffeescript,
-      mongodb,
-    },
-  },
-
-  {
-    name: 'Meteor ics',
-    description: `
-      A iCalendar .ics export which also enabled to integrate recurring events.
-    `,
-    startsAt: new Date('2015'),
-    endsAt: new Date('2015'),
-    urls: ['https://github.com/tamino-martinius/meteor-ics'],
-    media: [],
-    skills: {
-      meteor,
-      js,
-    },
-  },
-
-  {
-    name: 'Meteor lazy Analytics',
-    description: `
-      This pacakge provides a non blocking way to integrate Google Analytics
-      where the credentials are dynamically fetched from the Server.
-    `,
-    startsAt: new Date('2015'),
-    endsAt: new Date('2015'),
-    urls: ['https://github.com/tamino-martinius/meteor-lazy-analytics'],
-    media: [],
-    skills: {
-      meteor,
-      js,
-    },
-  },
-
-  {
-    name: 'Meteor Method Pagination',
-    description: `
-      This pacakge is a easy way to integrate pagination of data with Meteor
-      Server side methods..
-    `,
-    startsAt: new Date('2014'),
-    endsAt: new Date('2014'),
-    urls: ['https://github.com/tamino-martinius/meteor-method-pagination'],
-    media: [],
-    skills: {
-      meteor,
-      js,
-      coffeescript,
-    },
-  },
-];
-
-/*******
- * Misc *
- *******/
-
-export const misc: ShowCase[] = [
-  {
-    name: 'RVM Docker Images',
-    description: `
-      This repository generates a rainbow table of Ubuntu versions and Ruby
-      versions. The source is available on GitHub and the prebuild images
-      are available on Docker Hub.
-    `,
-    startsAt: new Date('2017'),
-    endsAt: new Date('2018'),
-    urls: [
-      'https://hub.docker.com/r/taminomartinius/rvm/',
-      'https://github.com/tamino-martinius/docker-rvm',
-    ],
-    media: [],
-    skills: {
-      docker,
-    },
-  },
-
-  {
-    name: 'Atom Spacebars language',
-    description: `
-      This Atom package enables syntax highlighting of Meteors Spacebars language.
-      Currently not maintained because i use VS Code now as main Editor.
-    `,
-    startsAt: new Date('2016'),
-    endsAt: new Date('2016'),
-    urls: ['https://github.com/tamino-martinius/atom-language-spacebars'],
-    media: [],
-    skills: {},
   },
 ];

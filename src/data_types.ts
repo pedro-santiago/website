@@ -1,12 +1,13 @@
 export enum Section {
   Profile,
-  Skills,
-  CurriculumVitae,
-  Experiments,
-  Projects,
-  Talks,
-  Packages,
-  Misc,
+  About,
+  TechStack,
+  CreditExpertise,
+  FintechSkills,
+  Experience,
+  CurrentProjects,
+  Customers,
+  AcademicBackground,
 }
 
 export enum Language {
@@ -17,6 +18,13 @@ export enum Language {
 }
 
 export const languages: Language[] = [Language.php, Language.ruby, Language.typescript, Language.javascript];
+
+export enum HumanLanguage {
+  'pt-BR',
+  'en-US',
+}
+
+export const humanLanguages: HumanLanguage[] = [HumanLanguage['pt-BR'], HumanLanguage['en-US']];
 
 export interface Stage {
   description?: string;
@@ -40,6 +48,11 @@ export interface ShowCase extends Stage {
   name: string;
   urls: string[];
   media: string[];
+}
+
+export interface Customer extends Stage {
+  client: string;
+  project: string;
 }
 
 export interface Skill {

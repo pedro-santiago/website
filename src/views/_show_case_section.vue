@@ -15,8 +15,8 @@
       <span class="white-space space"></span>
       <span class="expression">[</span>
     </CodeLine>
-    <template v-for="(entry, index) in data">
-      <ShowCase :key="`show-case-${index}`" :data="entry" :isLast="index === data.length - 1" />
+    <template v-for="(entry, index) in data" :key="`show-case-${index}`">
+      <ShowCase :data="entry" :isLast="index === data.length - 1" />
     </template>
     <CodeLine>
       <span class="expression">];</span>

@@ -1,9 +1,8 @@
-import * as OfflinePluginRuntime from 'offline-plugin/runtime';
-require('./style.styl');
-import Vue from 'vue';
+import './style.styl';
+import type { App } from 'vue';
 import { state } from './data';
 import { snakeCase } from './util';
-import { Section, Language, languages } from './data_types';
+import { Section, Language } from './data_types';
 
 let theme = 0;
 const themeCount = 3;
@@ -42,39 +41,41 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-Vue.mixin({
-  data() {
-    return {
-      Section,
-      state,
-    };
-  },
-  methods: {
-    snakeCase(str: string) {
-      return (<any>this).isRuby ? snakeCase(str) : str;
+export function setupMixin(app: App) {
+  app.mixin({
+    data() {
+      return {
+        Section,
+        state,
+      };
     },
-  },
-  computed: {
-    isJs() {
-      return (
-        this.state.currentLanguage === Language.javascript ||
-        this.state.currentLanguage === Language.typescript
-      );
+    methods: {
+      snakeCase(str: string) {
+        return (<any>this).isRuby ? snakeCase(str) : str;
+      },
     },
-    isTs() {
-      return this.state.currentLanguage === Language.typescript;
+    computed: {
+      isJs() {
+        return (
+          this.state.currentLanguage === Language.javascript ||
+          this.state.currentLanguage === Language.typescript
+        );
+      },
+      isTs() {
+        return this.state.currentLanguage === Language.typescript;
+      },
+      isRuby() {
+        return this.state.currentLanguage === Language.ruby;
+      },
+      isPhp() {
+        return this.state.currentLanguage === Language.php;
+      },
     },
-    isRuby() {
-      return this.state.currentLanguage === Language.ruby;
-    },
-    isPhp() {
-      return this.state.currentLanguage === Language.php;
-    },
-  },
-});
+  });
+}
 
 console.log(
-  '%c~/pedrosantiago.com.br %c%c  main%c cat %cREADME.md\n\n%c# pedrosantiago.com.br\n\nPortfolio of Pedro Oliveira - CTO as a Service & PHP Specialist',
+  '%c~/pedrosantiago.com.br %c%c  main%c cat %cREADME.md\n\n%c# pedrosantiago.com.br\n\nPortfolio of Pedro Santiago - CTO as a Service & PHP Specialist',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #2E8CCF; color: #000000;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #2E8CCF;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #000000;',
@@ -82,12 +83,3 @@ console.log(
   'font-family: "Fira Code", monospace; padding: 2px 0; color: #011;',
   'font-family: "Fira Code", monospace; padding: 2px 0; color: #233;',
 );
-
-OfflinePluginRuntime.install({
-  onUpdateReady: function() {
-    OfflinePluginRuntime.applyUpdate();
-  },
-  onUpdated: function() {
-    window.location.reload();
-  },
-});

@@ -4,13 +4,31 @@
       <Collapsed />
     </Comment>
     <template v-if="!collapsed">
-      <CodeLine>
+      <!-- PHP: new ClassName(...) -->
+      <CodeLine v-if="isPhp">
+        <Tab /><Tab /><Tab />
+        <span class="keyword">new</span>
+        <span class="white-space space"></span>
+        <span class="type class">{{ className }}</span>
+        <span class="expression">(</span>
+      </CodeLine>
+      <!-- JS/TS/Ruby: {...} -->
+      <CodeLine v-else>
         <Tab />
         <span class="expression">{</span>
       </CodeLine>
       <slot />
       <template v-if="data.description">
-        <CodeLine>
+        <CodeLine v-if="isPhp">
+          <Tab /><Tab /><Tab /><Tab />
+          <span class="variable">description</span>
+          <span class="expression">:</span>
+          <span class="white-space space"></span>
+          <span class="string">
+            {{ state.currentLanguageHelper.multilineString }}
+          </span>
+        </CodeLine>
+        <CodeLine v-else>
           <Tab /><Tab />
           <span class="variable">description</span>
           <span class="expression">:</span>
@@ -19,8 +37,15 @@
             {{ state.currentLanguageHelper.multilineString }}
           </span>
         </CodeLine>
-        <MultiLineString :value="data.description.trim()" :indentation="3" />
-        <CodeLine>
+        <MultiLineString :value="data.description.trim()" :indentation="isPhp ? 4 : 3" />
+        <CodeLine v-if="isPhp">
+          <Tab /><Tab /><Tab /><Tab />
+          <span class="string">
+            {{ state.currentLanguageHelper.multilineString }}
+          </span>
+          <span class="expression">,</span>
+        </CodeLine>
+        <CodeLine v-else>
           <Tab /><Tab />
           <span class="string">
             {{ state.currentLanguageHelper.multilineString }}
@@ -28,7 +53,15 @@
           <span class="expression">,</span>
         </CodeLine>
       </template>
-      <CodeLine>
+      <CodeLine v-if="isPhp">
+        <Tab /><Tab /><Tab /><Tab />
+        <VariableName name="startsAt" />
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <Date :value="data.startsAt"></Date>
+        <span class="expression">,</span>
+      </CodeLine>
+      <CodeLine v-else>
         <Tab /><Tab />
         <VariableName name="startsAt" />
         <span class="expression">:</span>
@@ -36,7 +69,15 @@
         <Date :value="data.startsAt"></Date>
         <span class="expression">,</span>
       </CodeLine>
-      <CodeLine>
+      <CodeLine v-if="isPhp">
+        <Tab /><Tab /><Tab /><Tab />
+        <VariableName name="endsAt" />
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <Date :value="data.endsAt"></Date>
+        <span class="expression">,</span>
+      </CodeLine>
+      <CodeLine v-else>
         <Tab /><Tab />
         <VariableName name="endsAt" />
         <span class="expression">:</span>
@@ -44,23 +85,50 @@
         <Date :value="data.endsAt"></Date>
         <span class="expression">,</span>
       </CodeLine>
-      <CodeLine>
+      <CodeLine v-if="isPhp">
+        <Tab /><Tab /><Tab /><Tab />
+        <VariableName name="skills" />
+        <span class="expression">:</span>
+        <span class="white-space space"></span>
+        <span class="expression">[</span>
+      </CodeLine>
+      <CodeLine v-else>
         <Tab /><Tab />
         <VariableName name="skills" />
         <span class="expression">:</span>
         <span class="white-space space"></span>
         <span class="expression">[</span>
       </CodeLine>
-      <CodeLine v-for="(skill, key) in data.skills" :key="key">
+      <CodeLine v-if="isPhp" v-for="(skill, key) in data.skills" :key="`php-${key}`">
+        <Tab /><Tab /><Tab /><Tab /><Tab />
+        <String :value="key"></String>
+        <span class="expression">,</span>
+        <span class="white-space space"></span>
+        <span class="comment">// {{ skill.level * 100 }}%</span>
+      </CodeLine>
+      <CodeLine v-else v-for="(skill, key) in data.skills" :key="`js-${key}`">
         <Tab /><Tab /><Tab />
         <span class="variable progress" :style="{ '--value': skill.level }">{{ key }}</span>
         <span class="expression">,</span>
       </CodeLine>
-      <CodeLine>
-        <Tab /><Tab />
-        <span class="expression">],</span>
+      <CodeLine v-if="isPhp">
+        <Tab /><Tab /><Tab /><Tab />
+        <span class="expression">]</span>
+        <span class="expression">,</span>
       </CodeLine>
-      <CodeLine>
+      <CodeLine v-else>
+        <Tab /><Tab />
+        <span class="expression">]</span>
+        <span class="expression">,</span>
+      </CodeLine>
+      <!-- PHP closing -->
+      <CodeLine v-if="isPhp">
+        <Tab /><Tab /><Tab />
+        <span class="expression">)</span>
+        <span class="expression">,</span>
+      </CodeLine>
+      <!-- JS/TS/Ruby closing -->
+      <CodeLine v-else>
         <Tab />
         <span class="expression">}</span>
         <span class="expression" v-if="isRuby">.with_indifferent_access</span>
@@ -89,7 +157,7 @@ export default {
       collapsed: true,
     };
   },
-  props: ['isLast', 'data', 'abbreviation'],
+  props: ['isLast', 'data', 'abbreviation', 'className'],
   methods: {
     toggle() {
       this.collapsed = !this.collapsed;

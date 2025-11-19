@@ -1,12 +1,13 @@
 <template>
   <Stage
     class="job"
+    className="Job"
     :abbreviation="`${startYear}-${endYear} - ${data.company} - ${mainPosition}`"
     :data="data"
     :isLast="isLast"
   >
     <CodeLine>
-      <Tab /><Tab />
+      <Tab /><Tab /><Tab /><Tab />
       <span class="variable">company</span>
       <span class="expression">:</span>
       <span class="white-space space"></span>
@@ -14,8 +15,8 @@
       <span class="expression">,</span>
     </CodeLine>
     <CodeLine>
-      <Tab /><Tab />
-      <VariableName name="remote" />
+      <Tab /><Tab /><Tab /><Tab />
+      <span class="variable">remote</span>
       <span class="expression">:</span>
       <span class="white-space space"></span>
       <Boolean :value="data.remote"></Boolean>
@@ -23,26 +24,27 @@
     </CodeLine>
     <template v-if="Array.isArray(data.position)">
       <CodeLine>
-        <Tab /><Tab />
-        <VariableName name="position" />
+        <Tab /><Tab /><Tab /><Tab />
+        <span class="variable">position</span>
         <span class="expression">:</span>
         <span class="white-space space"></span>
         <span class="expression">[</span>
       </CodeLine>
       <CodeLine v-for="position in data.position" :key="position">
-        <Tab /><Tab /><Tab />
+        <Tab /><Tab /><Tab /><Tab /><Tab />
         <String :value="position"></String>
         <span class="expression">,</span>
       </CodeLine>
       <CodeLine>
-        <Tab /><Tab />
-        <span class="expression">],</span>
+        <Tab /><Tab /><Tab /><Tab />
+        <span class="expression">]</span>
+        <span class="expression">,</span>
       </CodeLine>
     </template>
     <template v-else>
       <CodeLine>
-        <Tab /><Tab />
-        <VariableName name="position" />
+        <Tab /><Tab /><Tab /><Tab />
+        <span class="variable">position</span>
         <span class="expression">:</span>
         <span class="white-space space"></span>
         <String :value="data.position"></String>
