@@ -18,7 +18,7 @@ export const city = 'Belo Horizonte - Remote';
 export const emails: string[] = ['pedro@pedrosantiago.com.br'];
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/pedro-santiago',
-  linkedin: 'https://www.linkedin.com/in/pedro-oliveira-santiago',
+  linkedin: 'https://www.linkedin.com/in/santiagopedro/',
   website: 'https://pedrosantiago.com.br',
 };
 
@@ -28,7 +28,7 @@ export const yearsOfExperience = new Date().getFullYear() - careerStartYear;
 export const contact = {
   email: 'pedro@pedrosantiago.com.br',
   github: 'https://github.com/pedro-santiago',
-  linkedin: 'https://www.linkedin.com/in/pedro-oliveira-santiago',
+  linkedin: 'https://www.linkedin.com/in/santiagopedro/',
   website: 'https://pedrosantiago.com.br'
 };
 
