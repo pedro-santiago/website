@@ -138,7 +138,6 @@ export const platformEngineering: Skill = { level: 1.0, name: 'Platform Engineer
 // Frontend Tools
 export const inertiajs: Skill = { level: 1.0, name: 'Inertia.js' };
 export const compositionApi: Skill = { level: 1.0, name: 'Vue Composition API' };
-export const jquery: Skill = { level: 1.0, name: 'jQuery' };
 export const angularjs: Skill = { level: 0.8, name: 'AngularJS (v1)' };
 
 // Misc

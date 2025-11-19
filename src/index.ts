@@ -1,7 +1,6 @@
 import Vue from 'vue';
-require('./init');
-
-const View = require('./views/index.vue').default;
+import './init';
+import View from './views/index.vue';
 
 new Vue({
   el: '#view',

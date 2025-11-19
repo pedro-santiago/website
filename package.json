@@ -2,14 +2,15 @@
   "name": "tamino.dev",
   "private": true,
   "scripts": {
-    "watch": "scripts/watch.sh",
-    "build": "scripts/build.sh",
-    "start": "scripts/start.sh",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "deploy": "scripts/deploy.sh"
   },
   "devDependencies": {
-    "@types/node": "^14.11.2",
+    "@types/node": "^24.10.0",
     "@types/webpack": "^4.41.22",
+    "@vitejs/plugin-vue2": "^2.3.4",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^4.3.0",
@@ -23,6 +24,8 @@
     "ts-loader": "^8.0.4",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3",
+    "vite": "^7.2.2",
+    "vite-plugin-pwa": "^1.1.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2",
@@ -30,6 +33,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "vue": "^2.6.12"
+    "vue": "^2.7.16"
   }
 }

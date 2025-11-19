@@ -5,4 +5,4 @@ set -x
 
 source config
 
-node_modules/.bin/webpack --watch -d
+NODE_OPTIONS="--openssl-legacy-provider" node_modules/.bin/webpack --watch -d
