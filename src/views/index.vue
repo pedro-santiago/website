@@ -50,7 +50,6 @@
     <CodeLine />
     <Legal />
     <CodeLine />
-    <Privacy />
   </div>
 </template>
 
@@ -66,7 +65,6 @@ import CurriculumVitae from './_curriculum_vitae.vue';
 import Customers from './_customers.vue';
 import About from './_about.vue';
 import Legal from './_legal.vue';
-import Privacy from './_privacy.vue';
 import Profile from './_profile.vue';
 import CookieInfo from './_cookie_info.vue';
 import Navigation from './_navigation.vue';
@@ -94,7 +92,6 @@ export default {
     Customers,
     About,
     Legal,
-    Privacy,
     Profile,
     CookieInfo,
     Navigation,
